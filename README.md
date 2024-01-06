@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +8,8 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ffffff;
+            background-image: url('https://github.com/AGolz/by_me/blob/main/arsh_2_paper.jpg');
+            background-size: cover; 
             display: flex;
             flex-direction: column;
             min-height: 100vh;
@@ -15,8 +17,7 @@
 
         nav {
             padding: 10px;
-            text-align: left; 
-        }
+            text-align: left;
 
         nav ul {
             list-style-type: none;
@@ -49,3 +50,4 @@
     </nav>
 </body>
 </html>
+
