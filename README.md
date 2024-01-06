@@ -14,7 +14,6 @@
             flex-direction: column;
             min-height: 100vh;
             overflow: hidden;
-            <p> Welcome to the A.Golz page </p>
         }
 
         nav {
