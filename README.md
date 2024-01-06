@@ -32,13 +32,6 @@
             font-size: 1.2em;
         }
         
-        footer {
-            padding: 10px;
-            text-align: center;
-            margin-top: auto;
-            width: 100%;
-        }
-
         a {
             text-decoration: none;
             color: inherit; 
@@ -56,11 +49,6 @@
             <li><a href="#linkedin">LinkedIn</a></li>
         </ul>
     </nav>
-    
-    <footer>
-        <p>&copy; 2024 Alyona Golz. All rights reserved.</p>
-    </footer>
-
 </body>
 </html>
 
