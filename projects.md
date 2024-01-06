@@ -99,7 +99,7 @@
                 Skill Development: Strengthened my proficiency in server configuration, security protocols, and documentation, laying a foundation for future projects and real-world applications.<br>
                 The project's success reflects my dedication to excellence in system administration and security, showcasing my ability to apply theoretical knowledge to practical, real-world scenarios. The comprehensive documentation serves as a valuable resource for fellow developers and enthusiasts, contributing to the broader community's understanding of robust server setups and security protocols.<br>
             </td>
-            <td><a href="https://github.com/AGolz/Born2beRoot">the Born2beRoot project on GitHub</a></td>
+            <td><a href="https://github.com/AGolz/Born2beRoot"><strong>the Born2beRoot project on GitHub</strong></a></td>
         </tr>
         <tr>
             <td>
