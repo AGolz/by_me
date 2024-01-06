@@ -1,7 +1,3 @@
----
-title: "Welcome to the A.Golz page"
----
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
