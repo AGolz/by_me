@@ -30,14 +30,14 @@
         nav li {
             display: block;
             margin-bottom: 10px;
-            font-style: italic;
             font-size: 1.2em;
         }
         
         footer {
             padding: 10px;
             text-align: center;
-            margin-top: auto; 
+            margin-top: auto;
+            width: 100%;
         }
 
         a {
