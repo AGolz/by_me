@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,7 +8,8 @@
             margin: 0;
             padding: 0;
             background-image: url('https://github.com/AGolz/by_me/blob/main/arsh_2_paper.jpg');
-            background-size: cover; 
+            background-size: cover;
+            background-repeat: repeat; 
             display: flex;
             flex-direction: column;
             min-height: 100vh;
