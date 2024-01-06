@@ -13,6 +13,7 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            overflow: hidden;
         }
 
         nav {
@@ -32,6 +33,8 @@
             display: block;
             margin-bottom: 15px;
             font-size: 1.2em;
+            position: relative;
+            animation: githubAnimation 2s infinite alternate;
         }
 
         a {
@@ -39,6 +42,14 @@
             color: inherit;
             font-family: 'Indie Flower';
             font-weight: bold; 
+        }
+        @keyframes githubAnimation {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-10px);
+            }
         }
     </style>
 </head>
