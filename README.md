@@ -56,8 +56,14 @@
         }
 
         .gifer-container p {
-            display: none; /
-        }
+            font-family: 'Indie Flower';
+            font-weight: bold;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0;
+
     </style>
 </head>
 <body>
