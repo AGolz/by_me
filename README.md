@@ -41,6 +41,23 @@
             font-family: 'Indie Flower';
             font-weight: bold; 
         }
+        
+        .gifer-container {
+            position: relative;
+            padding-top: 100%;
+        }
+
+        .gifer-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .gifer-container p {
+            display: none; /* Hide the "через GIFER" inscription */
+        }
     </style>
 </head>
 <body>
@@ -55,49 +72,8 @@
     </ul>
 </nav>
 
-<div class="slides">
-    <div id="first-slide" class="slide" data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAGQCAMAAABh+/QGAAAC9FBMVEXu7u7u7u7////5+fn////u7u78/Pz7+/v////////////5+fn////////////7+/v////////////39/f////6+vr+/v76+vr////////39/f////v7+/9/f3v7+/////////+/v74+Pj////////////////////8/Pz5+fn////////////w8PD+/v7z8/P////7+/v////////9/f3u7u7////////4+Pj////////////////////////////////////u7u7////6+vr////09PT////////////////////////////////4+Pj////////y8vL////////////////////////v7+/////////////09PTu7u79/f3////////39/f////////////////////////////////////////////8/Pz////29vb////////z8/P////////////////x8fH////////////////////////z8/P////z8/P////////////////////////////////////19fX////v7+/x8fH////////////////////39/f////////w8PD////////x8fHz8/P////////////z8/P19fX////19fX////////////y8vL////29vb////x8fH////29vb////////////////////////////////v7+/////////////////x8fH////////19fX19fX////////x8fHw8PD09PT29vb////////w8PD////////y8vLw8PDw8PDy8vL09PTv7+/////////////////////////////////////////////////////////////////4+Pj////v7+/////y8vL///////////////8AAADu7u7u7u7v7+/y8vL19fXz8/P29vb5+fn4+Pj09PT39/f6+vr9/f37+/v8/Pz+/v7v7+////8Ohw90AAAA6nRSTlP+/VG3EfiorVyeTbVdYkysPhdSvl+yobNjU8Fg9qf3NWGjuzuEG0kSq7YfHVjuotZtrpwypftBIryRXlcWnXaNm5P5g7CQ0RpkixNFlHs9vXpW3UoUfk98dPRONn3Q/Kaaj8JlhkMZQGqKSDMuDKpQxnFm1xCgZ4zmhSZUKzgo1HLYmWsciG5sMBhoyUfy5440cHOJwJdb62+S4dOCeTrZy5XIloGY2yPHf+MnwzcsP0RCIC1p8yl1OTziJDHMzRVG5OjOxQ0v7YAl4Ozp3NLvBw4hKggKCwUDCR4GAQQCD7mH8UveWnd4VQDbCiR9AAAUpUlEQVR42uzTMQEAAAjAIPs3tYUJ/HdAB2aBlyAgCAgCgoAgECEICAKCgCAgCEQIAoKAICAICAIRgoAgIAgIAoJAhCAgCAgCgoAgECEICAKCgCAgCEQIAoKAICAICAIRgoAgIAgIAoJAhCAgCAgCgoAgECEICAKCgCAgCEQIAoKAICAICAIRgoAgIAgIAoJAhCAgCAgCgoAgECEICAKCgCAgCEQIAoKAICAICAIRgoAgIAgIAoJAhCAgCAgCgoAgECEICAKCgCAgCEQIAoKAICAICAIRgoAgIAgIAoJAhCAgCAgCgoAgECEICAKCgCAgCEQIAoKAICAICAIRgnDs1aFKBFEYhuH7Ea/BuHgdm4wmk2iw6SUsdoNJZM2CeYNbJjhNlAmjsA6CnCLKjjocF9f2w3me9N3Ay4dAQCAgEBAIBCEQEAgIBAQCAoEgBAICAYGAQEAgEIRAQCAgEBAICASCEAgIBAQCAgGBQBACAYGAQEAgIBAIQiAgEBAICAQEAkEIBAQCAgGBgEAgCIGAQEAgIBAQCAQhEBAICAQEAgKBIAQCAgGBgEBAIBCEQEAgIBAQCAgEghAIlBRItT3pnk427xoQSOZglD6NNxoQyFB11aWlds+JIJCB6Sj9ML5oQCC9aqtLA+2xE0EgS9NZypw7EQTyoe7vw4kgkMx8lla4uW2g7EDqhy6t1F46EYoOpL8PJ4JAMvXjIv3heceJUGgg80law64TocRAvu7DiSCQzP5hWtuZE6GsQOrTRfqHlyMnQkGB/HIfr9ff+/7NiVBuIO/snWl0FFUWx89sZ/ZFZ3OcxXVchnFB3AVFVHRURBGRRUAEgREQRUA2kSXs+74YEASRJSJBCYMIEmAQAAAABJRU5ErkJggg==">
-    </div>
+<div class="gifer-container">
+    <iframe src="https://gifer.com/embed/7had" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
 </div>
-<canvas class="draw"></canvas>
-
-<p>Welcome to the A.Golz page</p>
-
-<script>
-  var ps;
-
-  var init = function () {
-    var isMobile = navigator.userAgent &&
-      navigator.userAgent.toLowerCase().indexOf('mobile') >= 0;
-    var isSmall = window.innerWidth < 1000;
-
-    ps = new ParticleSlider({
-      ptlGap: isMobile || isSmall ? 3 : 0,
-      ptlSize: isMobile || isSmall ? 3 : 1,
-      width: 1e9,
-      height: 1e9
-    });
-
-    var gui = new dat.GUI();
-    gui.add(ps, 'ptlGap').min(0).max(5).step(1).onChange(function () {
-      ps.init(true);
-    });
-    gui.add(ps, 'ptlSize').min(1).max(5).step(1).onChange(function () {
-      ps.init(true);
-    });
-    gui.add(ps, 'restless');
-    gui.addColor(ps, 'color').onChange(function (value) {
-      ps.monochrome = true;
-      ps.setColor(value);
-      ps.init(true);
-    });
-
-    document.addEventListener('click', function () {
-      ps.init(true);
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', init);
-</script>
 </body>
 </html>
