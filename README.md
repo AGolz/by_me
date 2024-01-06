@@ -8,28 +8,18 @@
             font-family: 'Indie Flower';
             margin: 0;
             padding: 0;
+            background-image: url('https://raw.githubusercontent.com/AGolz/by_me/main/arsh_2_paper.jpg');
             background-size: cover;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
 
-        header {
-            padding: 15px;
-            text-align: left;
-            font-family: 'Indie Flower';
-            font-weight: bold;
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            background-image: url('https://raw.githubusercontent.com/AGolz/by_me/main/104507.png');
-        }
-
         nav {
             padding: 15px;
             text-align: left;
             font-family: 'Indie Flower';
-            font-weight: bold;
+            font-weight: bold; 
         }
 
         nav ul {
@@ -42,23 +32,17 @@
             display: block;
             margin-bottom: 15px;
             font-size: 1.2em;
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            background-image: url('https://raw.githubusercontent.com/AGolz/by_me/main/104507.png');
         }
 
         a {
             text-decoration: none;
             color: inherit;
+            font-family: 'Indie Flower';
+            font-weight: bold; 
         }
     </style>
 </head>
-<body style="background-image: url('https://raw.githubusercontent.com/AGolz/by_me/main/arsh_2_paper.jpg');">
-
-    <header>
-        My Website
-    </header>
+<body>
 
     <nav>
         <ul>
@@ -71,4 +55,3 @@
     </nav>
 </body>
 </html>
-
