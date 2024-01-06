@@ -63,6 +63,9 @@
             left: 50%;
             transform: translateX(-50%);
             color: #491617;
+            font-family: 'Indie Flower';
+            font-weight: bold;
+            color: #491617;
     </style>
 </head>
 <body>
