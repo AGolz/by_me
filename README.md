@@ -70,7 +70,7 @@
 </nav>
 
 <div class="gifer-container">
-    <iframe src="https://gifer.com/embed/3Og7e" width="100%" height="100%" frameborder="0"></iframe>
+    <iframe src="https://giphy.com/embed/05IX16a0DlzM9LyCn7" width="100%" height="100%" frameborder="0"></iframe>
 </div>
 <p> Welcome to the A.Golz page </p>
 </body>
