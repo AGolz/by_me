@@ -71,3 +71,10 @@
 
 </body>
 </html>
+
+    <footer>
+        <p>&copy; 2024 Alyona Golz. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
