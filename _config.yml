@@ -1,14 +1,23 @@
-theme: jekyll-theme-minimal
-encoding: UTF-8
-lsi: false
-safe: true
-source: https://github.com/AGolz/by_me/
-incremental: false
-highlighter: rouge
-gist:
-  noscript: false
-kramdown:
-  math_engine: mathjax
-  syntax_highlighter: rouge
 name: Welcome to the A.Golz page
 description: Bookmark this to keep an eye on updates! (:
+permalink: /:title/
+version: v1.2.0
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+
+sass:
+  style: :expanded
+
+gems:
+  - jekyll-sitemap
+  - jekyll-feed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME
