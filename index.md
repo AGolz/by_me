@@ -81,7 +81,7 @@
 
 <div class="gifer-container">
     <iframe src="https://giphy.com/embed/05IX16a0DlzM9LyCn7" width="100%" height="100%" frameborder="0"></iframe>
-    <p class="bottom-inscription">(c) by me 2024</p>
+    <p class="bottom-inscription">© by me 2024</p>
 </div>
 </body>
 </html>
