@@ -5,6 +5,7 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
+            color: inherit;
             margin: 0;
             padding: 0;
             background-image: url('https://raw.githubusercontent.com/AGolz/by_me/main/arsh_2_paper.jpg');
