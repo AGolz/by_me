@@ -1,41 +1,39 @@
-<style>
-    body {
-        font-family: 'Indie Flower';
-        margin: 0;
-        padding: 0;
-        background-image: url('https://raw.githubusercontent.com/AGolz/by_me/main/arsh_2_paper.jpg');
-        background-size: cover;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        overflow: hidden;
-    }
-    
-    nav {
-        padding: 15px;
-        text-align: left;
-        font-family: 'Indie Flower';
-        font-weight: bold;
-        color: #491617;
-    }
+body {
+    font-family: 'Indie Flower';
+    margin: 0;
+    padding: 0;
+    background-image: url('https://raw.githubusercontent.com/AGolz/by_me/main/arsh_2_paper.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+}
 
-    nav ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
+nav {
+    padding: 15px;
+    text-align: left;
+    font-family: 'Indie Flower';
+    font-weight: bold;
+    color: #491617;
+}
 
-    nav li {
-        display: block;
-        margin-bottom: 15px;
-        font-size: 1.2em;
-    }
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 
-    a {
-        text-decoration: none;
-        color: inherit;
-        font-family: 'Indie Flower';
-        font-weight: bold;
-        color: #491617;
-    }
-</style>
+nav li {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-family: 'Indie Flower';
+    font-weight: bold;
+    color: #491617;
+}
