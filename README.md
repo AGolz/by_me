@@ -70,7 +70,7 @@
 </nav>
 
 <div class="gifer-container">
-    <iframe src="http://surl.li/oyles" width="100%" height="100%" frameborder="0"></iframe>
+    <iframe src="https://gifer.com/embed/3Og7e" width="100%" height="100%" frameborder="0"></iframe>
 </div>
 <p> Welcome to the A.Golz page </p>
 </body>
