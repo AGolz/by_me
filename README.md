@@ -64,7 +64,6 @@
 <p>Welcome to the A.Golz page</p>
 
 <script>
-  // Your existing JavaScript code here
   var ps;
 
   var init = function () {
@@ -93,16 +92,12 @@
       ps.init(true);
     });
 
-    (window.addEventListener
-      ? window.addEventListener('click', function () { ps.init(true) }, false)
-      : window.onclick = function () { ps.init(true) });
+    document.addEventListener('click', function () {
+      ps.init(true);
+    });
   }
 
-  // Initialize ParticleSlider after the window has loaded
-  window.onload = function () {
-    init();
-    // Add any additional initialization code here
-  };
+  document.addEventListener('DOMContentLoaded', init);
 </script>
 </body>
 </html>
