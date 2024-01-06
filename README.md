@@ -17,7 +17,7 @@
         }
 
         nav {
-            padding: 10px;
+            padding: 15px;
             text-align: left;
             font-family: 'Indie Flower';
         }
@@ -30,7 +30,7 @@
 
         nav li {
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             font-size: 1.2em;
         }
 
