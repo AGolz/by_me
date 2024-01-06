@@ -11,18 +11,15 @@
             background-color: #ffffff; 
         }
 
-        header {
-            background-color: #f0f0f0; 
-            padding: 20px;
-            text-align: center;
-        }
-
         nav {
             background-color: #f8f8f8;
             border: 1px solid #ddd; 
             padding: 10px;
             text-align: center;
-            margin: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
         nav ul {
@@ -32,8 +29,8 @@
         }
 
         nav li {
-            display: inline;
-            margin-right: 20px;
+            display: block;
+            margin-bottom: 10px;
             font-style: italic;
             font-size: 1.2em;
         }
@@ -50,10 +47,6 @@
     </style>
 </head>
 <body>
-
-    <header>
-        <h1>Alyona Golz</h1>
-    </header>
 
     <nav>
         <ul>
@@ -72,9 +65,3 @@
 </body>
 </html>
 
-    <footer>
-        <p>&copy; 2024 Alyona Golz. All rights reserved.</p>
-    </footer>
-
-</body>
-</html>
