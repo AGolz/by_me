@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -52,7 +51,7 @@
 <body>
 
     <header>
-        <h1>Your Name</h1>
+        <h1>Alyona Golz</h1>
         <p>Welcome to my personal website!</p>
     </header>
 
@@ -65,32 +64,6 @@
             <li><a href="#linkedin">LinkedIn</a></li>
         </ul>
     </nav>
-
-    <section id="mygithub">
-        <h2>My GitHub</h2>
-        <!-- Add content related to your GitHub here -->
-    </section>
-
-    <section id="myprojects">
-        <h2>My Projects</h2>
-        <!-- Add content related to your projects here -->
-    </section>
-
-    <section id="myresume">
-        <h2>My Resume</h2>
-        <!-- Add content related to your resume here -->
-    </section>
-
-    <section id="telegram">
-        <h2>Telegram</h2>
-        <!-- Add content related to your Telegram account here -->
-    </section>
-
-    <section id="linkedin">
-        <h2>LinkedIn</h2>
-        <!-- Add content related to your LinkedIn profile here -->
-    </section>
-
     <footer>
         <p>&copy; 2024  Alyona Golz. All rights reserved.</p>
     </footer>
