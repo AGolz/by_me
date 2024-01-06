@@ -10,6 +10,7 @@
             padding: 0;
             background-image: url('https://raw.githubusercontent.com/AGolz/by_me/main/arsh_2_paper.jpg');
             background-size: cover;
+            background-repeat: repeat; 
             display: flex;
             flex-direction: column;
             min-height: 100vh;
