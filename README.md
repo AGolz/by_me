@@ -33,8 +33,6 @@
             display: block;
             margin-bottom: 15px;
             font-size: 1.2em;
-            position: relative;
-            animation: githubAnimation 2s infinite alternate;
         }
 
         a {
@@ -43,14 +41,7 @@
             font-family: 'Indie Flower';
             font-weight: bold; 
         }
-        @keyframes githubAnimation {
-            0% {
-                transform: translateY(0);
-            }
-            100% {
-                transform: translateY(-10px);
-            }
-        }
+
     </style>
 </head>
 <body>
