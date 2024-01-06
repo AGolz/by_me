@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ site.title }} / {{ page.title }} </title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap">
     <style>
         body {
@@ -17,7 +16,7 @@
             min-height: 100vh;
             overflow: hidden;
         }
-
+        
         nav {
             padding: 15px;
             text-align: left;
@@ -60,7 +59,11 @@
     </style>
 </head>
 <body>
-
+   <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>{{ site.title }} / {{ page.title }} </title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap">
+    </head>
 <nav>
     <ul>
         <li><a href="#mygithub">GitHub</a></li>
