@@ -35,15 +35,14 @@
         }
         
         footer {
-            background-color: #f0f0f0;
             padding: 10px;
             text-align: center;
-            margin-top: auto; /* Push the footer to the bottom */
+            margin-top: auto; 
         }
 
         a {
-            text-decoration: none; /* Remove underline from links */
-            color: inherit; /* Inherit text color */
+            text-decoration: none;
+            color: inherit; 
         }
     </style>
 </head>
