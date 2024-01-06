@@ -9,20 +9,19 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ffffff; /* Set your preferred background color */
+            background-color: #ffffff; 
         }
 
         header {
             text-align: center;
             padding: 20px;
-            background-color: #f0f0f0; /* Set your preferred header background color */
-        }
+            background-color: #f0f0f0; 
 
         nav {
             text-align: center;
             margin: 20px;
             background-color: #f8f8f8; /* Set your preferred menu background color */
-            border: 1px solid #ddd; /* Add a border for separation */
+            border: 1px solid #ddd; 
             padding: 10px;
         }
 
@@ -46,7 +45,7 @@
         footer {
             text-align: center;
             padding: 10px;
-            background-color: #f0f0f0; /* Set your preferred footer background color */
+            background-color: #f0f0f0; 
         }
     </style>
 </head>
@@ -93,7 +92,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>&copy; 2024  Alyona Golz. All rights reserved.</p>
     </footer>
 
 </body>
