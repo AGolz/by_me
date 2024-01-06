@@ -59,11 +59,8 @@
     </style>
 </head>
 <body>
-   <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <title>{{ site.title }} / {{ page.title }} </title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap">
-    </head>
+    <title>{{Welcome to the A.Golz page}} </title>
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap">
 <nav>
     <ul>
         <li><a href="#mygithub">GitHub</a></li>
