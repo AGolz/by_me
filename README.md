@@ -53,17 +53,8 @@
             left: 0;
             width: 100%;
             height: 100%;
+            background: transparent;
         }
-
-        .gifer-container p {
-            font-family: 'Indie Flower';
-            font-weight: bold;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            margin: 0;
-
     </style>
 </head>
 <body>
@@ -80,7 +71,7 @@
 
 <div class="gifer-container">
     <iframe src="https://gifer.com/embed/28eN" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
-    <p><a Welcome to the A.Golz page /a></p>
+    <p> Welcome to the A.Golz page </p>
 </div>
 </body>
 </html>
