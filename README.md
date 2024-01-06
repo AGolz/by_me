@@ -56,7 +56,7 @@
         }
 
         .gifer-container p {
-            display: none; /* Hide the "через GIFER" inscription */
+            display: none; /
         }
     </style>
 </head>
@@ -73,7 +73,8 @@
 </nav>
 
 <div class="gifer-container">
-    <iframe src="https://gifer.com/embed/7had" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://gifer.com/embed/28eN" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+    <p><a Welcome to the A.Golz page /a></p>
 </div>
 </body>
 </html>
