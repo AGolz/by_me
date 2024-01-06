@@ -7,7 +7,7 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('https://github.com/AGolz/by_me/blob/main/arsh_2_paper.jpg');
+            background-image: url('https://raw.githubusercontent.com/AGolz/by_me/main/arsh_2_paper.jpg');
             background-size: cover;
             background-repeat: repeat; 
             display: flex;
