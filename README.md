@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,6 +19,7 @@
         nav {
             padding: 10px;
             text-align: left;
+            font-family: 'Dancing Script', cursive;
         }
 
         nav ul {
@@ -35,6 +37,7 @@
         a {
             text-decoration: none;
             color: inherit;
+            font-family: 'Dancing Script', cursive; 
         }
     </style>
 </head>
@@ -51,4 +54,5 @@
     </nav>
 </body>
 </html>
+
 
