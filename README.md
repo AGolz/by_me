@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,18 +9,16 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ffffff; 
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         nav {
             background-color: #f8f8f8;
-            border: 1px solid #ddd; 
             padding: 10px;
             text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
         }
 
         nav ul {
@@ -34,15 +33,17 @@
             font-style: italic;
             font-size: 1.2em;
         }
-
-        section {
-            padding: 20px;
-        }
-
+        
         footer {
-            background-color: #f0f0f0; 
+            background-color: #f0f0f0;
             padding: 10px;
             text-align: center;
+            margin-top: auto; /* Push the footer to the bottom */
+        }
+
+        a {
+            text-decoration: none; /* Remove underline from links */
+            color: inherit; /* Inherit text color */
         }
     </style>
 </head>
@@ -57,11 +58,12 @@
             <li><a href="#linkedin">LinkedIn</a></li>
         </ul>
     </nav>
-
+    
     <footer>
         <p>&copy; 2024 Alyona Golz. All rights reserved.</p>
     </footer>
 
 </body>
 </html>
+
 
