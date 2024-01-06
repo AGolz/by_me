@@ -70,7 +70,7 @@
 </nav>
 
 <div class="gifer-container">
-    <iframe src="https://raw.githubusercontent.com/AGolz/by_me/main/cat.gif" width="100%" height="100%" frameborder="0"></iframe>
+    <iframe src="https://i.gifer.com/3Og7e.gif" width="100%" height="100%" frameborder="0"></iframe>
 </div>
 <p> Welcome to the A.Golz page </p>
 </body>
