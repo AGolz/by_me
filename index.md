@@ -56,6 +56,7 @@
             width: 100%;
             height: 100%;
             background: transparent;
+            pointer-events: none;
         }
         .bottom-inscription {
             position: absolute;
