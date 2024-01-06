@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Alyona Golz - Personal Website</title>
+    <title>Alyona Golz - Personal Website</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -12,16 +12,17 @@
         }
 
         header {
-            text-align: center;
-            padding: 20px;
             background-color: #f0f0f0; 
+            padding: 20px;
+            text-align: center;
+        }
 
         nav {
-            text-align: center;
-            margin: 20px;
             background-color: #f8f8f8;
             border: 1px solid #ddd; 
             padding: 10px;
+            text-align: center;
+            margin: 20px;
         }
 
         nav ul {
@@ -42,9 +43,9 @@
         }
 
         footer {
-            text-align: center;
-            padding: 10px;
             background-color: #f0f0f0; 
+            padding: 10px;
+            text-align: center;
         }
     </style>
 </head>
@@ -52,7 +53,6 @@
 
     <header>
         <h1>Alyona Golz</h1>
-        <p>Welcome to my personal website!</p>
     </header>
 
     <nav>
@@ -64,8 +64,9 @@
             <li><a href="#linkedin">LinkedIn</a></li>
         </ul>
     </nav>
+
     <footer>
-        <p>&copy; 2024  Alyona Golz. All rights reserved.</p>
+        <p>&copy; 2024 Alyona Golz. All rights reserved.</p>
     </footer>
 
 </body>
