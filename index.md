@@ -76,7 +76,7 @@
         <li><a href="#myprojects">Projects</a></li>
         <li><a href="#myresume">Curriculum Vitae</a></li>
         <li><a href="https://t.me/Alyona_Golz/" target="_blank">Telegram</a></li>
-        <li><a href="https://www.linkedin.com/in/agolz/" target="_blank"></a></li>
+        <li><a href="https://www.linkedin.com/in/agolz/" target="_blank">LinkedIn</a></li>
     </ul>
 </nav>
 
