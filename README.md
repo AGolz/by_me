@@ -1,9 +1,7 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alyona Golz - Personal Website</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -17,7 +15,7 @@
 
         nav {
             padding: 10px;
-            text-align: center;
+            text-align: left; 
         }
 
         nav ul {
@@ -51,4 +49,3 @@
     </nav>
 </body>
 </html>
-
