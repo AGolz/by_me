@@ -14,6 +14,7 @@
             flex-direction: column;
             min-height: 100vh;
             overflow: hidden;
+            <p> Welcome to the A.Golz page </p>
         }
 
         nav {
@@ -72,6 +73,5 @@
 <div class="gifer-container">
     <iframe src="https://giphy.com/embed/05IX16a0DlzM9LyCn7" width="100%" height="100%" frameborder="0"></iframe>
 </div>
-<p> Welcome to the A.Golz page </p>
 </body>
 </html>
