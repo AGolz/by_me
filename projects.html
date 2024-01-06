@@ -15,6 +15,7 @@
             padding: 0;
             font-family: 'Indie Flower';
             color: #491617;
+            overflow-y: auto; /* Enable vertical scrolling */
         }
 
         h1 {
@@ -30,7 +31,7 @@
         th, td {
             padding: 10px;
             border-bottom: 1px dashed #491617;
-            font-family: 'Indie Flower'; /* Font for the entire cell */
+            font-family: Arial, sans-serif; /* Set font to Arial */
         }
 
         th {
@@ -42,20 +43,18 @@
             text-decoration: none;
         }
 
-        /* Adjust the width of the left column */
         td:first-child {
-            width: 60%; /* You can adjust this value as needed */
+            width: 80%;
         }
 
-        /* Use a different font for non-bold text */
         td:not(:first-child) {
             font-weight: normal;
-            font-family: 'Your Other Font', sans-serif; /* Specify your preferred font */
         }
 
-        /* Bold text */
         strong {
             font-weight: bold;
+            display: block; /* Start on a new line */
+            margin-top: 10px; /* Add some spacing between bold lines */
         }
     </style>
 </head>
@@ -96,6 +95,7 @@
             <td>Project 2</td>
             <td><a href="#">Link to Project 2</a></td>
         </tr>
+        <!-- Add more rows as needed -->
     </table>
 </body>
 </html>
