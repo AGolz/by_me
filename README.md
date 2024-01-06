@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Welcome to the A.Golz page
+title: Home
 ---
 
 <html lang="en">
