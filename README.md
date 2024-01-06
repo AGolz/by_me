@@ -1,7 +1,3 @@
----
-layout: default
-title: Home
----
 
 <html lang="en">
 <head>
