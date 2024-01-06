@@ -1,3 +1,11 @@
-theme: by_me
-title: Welcome to the A.Golz page
+name: Welcome to the A.Golz page
 description: Bookmark this to keep an eye on updates! (:
+avatar: https://raw.githubusercontent.com/AGolz/by_me/main/avatar.png
+url: https://agolz.github.io/by_me
+baseurl: "/by_me"
+
+footer-links:
+  github: AGolz
+
+disqus: your_disqus_shortname
+google_analytics: your_google_analytics_tracking_code
