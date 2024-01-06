@@ -70,8 +70,8 @@
 </nav>
 
 <div class="gifer-container">
-    <iframe src="https://gifer.com/embed/28eN" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
-    <p> Welcome to the A.Golz page </p>
+    <iframe src="https://gifer.com/embed/nRq" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
 </div>
+<p> Welcome to the A.Golz page </p>
 </body>
 </html>
