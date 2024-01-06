@@ -20,7 +20,8 @@
             padding: 15px;
             text-align: left;
             font-family: 'Indie Flower';
-            font-weight: bold; 
+            font-weight: bold;
+            color: #491617;
         }
 
         nav ul {
@@ -39,7 +40,8 @@
             text-decoration: none;
             color: inherit;
             font-family: 'Indie Flower';
-            font-weight: bold; 
+            font-weight: bold;
+            color: #491617;
         }
         
         .gifer-container {
@@ -55,6 +57,12 @@
             height: 100%;
             background: transparent;
         }
+        .bottom-inscription {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #491617;
     </style>
 </head>
 <body>
@@ -70,6 +78,7 @@
 
 <div class="gifer-container">
     <iframe src="https://giphy.com/embed/05IX16a0DlzM9LyCn7" width="100%" height="100%" frameborder="0"></iframe>
+    <p class="bottom-inscription">(c) by me 2024</p>
 </div>
 </body>
 </html>
