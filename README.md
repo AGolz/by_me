@@ -19,7 +19,7 @@
         nav {
             padding: 15px;
             text-align: left;
-            font-family: 'Indie Flower';
+            font-family: 'Indie Flower', bold;
         }
 
         nav ul {
@@ -37,7 +37,7 @@
         a {
             text-decoration: none;
             color: inherit;
-            font-family: 'Indie Flower';
+            font-family: 'Indie Flower', bold;
         }
     </style>
 </head>
