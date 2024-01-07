@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -25,15 +26,23 @@
         .project-menu {
             display: flex;
             justify-content: center;
-            margin-top: 10px; /* Adjusted margin */
+            margin-top: 20px; /* Adjusted margin */
         }
 
         .project-menu a {
-            margin: 0 10px; /* Adjusted margin */
+            margin: 0 20px; /* Adjusted margin */
             text-decoration: none;
             color: #491617;
             font-weight: bold;
             font-family: 'Indie Flower'; /* Set font to Indie Flower */
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent; /* Added border for highlighting */
+        }
+
+        .project-menu a:hover,
+        .project-menu a:active,
+        .project-menu a:focus {
+            border-bottom-color: #491617; /* Highlight color on hover/active/focus */
         }
 
         table {
@@ -85,10 +94,10 @@
     <h1>Projects</h1>
 
     <div class="project-menu">
-        <a href="#" onclick="showProject('born2beRoot')">Born2beRoot</a>
-        <a href="#" onclick="showProject('ftPrintf')">ft_printf</a>
-        <a href="#" onclick="showProject('pushSwap')">Push_Swap</a>
-        <a href="#" onclick="showProject('dictionaryOfNumerals')">Dictionary of Numerals</a>
+        <a href="#" onclick="showProject('born2beRoot')" id="born2beRootLink">Born2beRoot</a>
+        <a href="#" onclick="showProject('ftPrintf')" id="ftPrintfLink">ft_printf</a>
+        <a href="#" onclick="showProject('pushSwap')" id="pushSwapLink">Push_Swap</a>
+        <a href="#" onclick="showProject('dictionaryOfNumerals')" id="dictionaryOfNumeralsLink">Dictionary of Numerals</a>
     </div>
     <table id="born2beRoot">
         <tr>
@@ -200,8 +209,19 @@
             var tables = document.querySelectorAll('table');
             tables.forEach(table => table.style.display = 'none');
             var selectedTable = document.getElementById(projectId);
+            var menuLinks = document.querySelectorAll('.project-menu a');
+            
             if (selectedTable) {
                 selectedTable.style.display = 'table';
+            }
+
+            menuLinks.forEach(link => {
+                link.style.borderBottomColor = 'transparent';
+            });
+
+            var selectedLink = document.getElementById(projectId + 'Link');
+            if (selectedLink) {
+                selectedLink.style.borderBottomColor = '#491617';
             }
         }
     </script>
