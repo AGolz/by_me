@@ -26,13 +26,13 @@ document.addEventListener("DOMContentLoaded", function () {
         var content = document.getElementById('content');
         var newPosition = getRandomPosition();
 
-        while (isOverlap(cat, content)) {
-            newPosition = getRandomPosition();
+        if (!isOverlap(cat, content)) {
+            cat.style.left = newPosition.x + 'px';
+            cat.style.top = newPosition.y + 'px';
         }
-
-        cat.style.left = newPosition.x + 'px';
-        cat.style.top = newPosition.y + 'px';
     }
+
+    updateCatPosition();
 
     setInterval(updateCatPosition, 3000);
 });
