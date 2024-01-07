@@ -1,23 +1,18 @@
-document.addEventListener("DOMContentLoaded", function () {
-    function getRandomPosition() {
-        var screenWidth = window.innerWidth - 50;
-        var screenHeight = window.innerHeight - 50;
+function getRandomPosition() {
+    var screen Width = window.innerWidth - 50;
+    var screenHeight = window.innerHeight - 50;
 
-        var randomX = Math.floor(Math.random() * screenWidth);
-        var randomY = Math.floor(Math.random() * screenHeight);
+    var content = document.getElementById('content');
+    var contentRect = content.getBoundingClientRect();
+    var contentWidth = contentRect.width;
+    var contentHeight = contentRect.height;
 
-        return { x: randomX, y: randomY };
-    }
+    // Calculate the maximum positions without overlapping with the text content
+    var maxX = screen Width - contentWidth;
+    var maxY = screenHeight - contentHeight;
 
-    function updateCatPosition() {
-        var cat = document.getElementById('cat');
-        var newPosition = getRandomPosition();
+    // Generate random positions within the calculated limits
+    var randomX = Math.floor(Math.random() * maxX);
+    var randomY = Math.floor(Math.random() * maxY);
 
-        cat.style.left = newPosition.x + 'px';
-        cat.style.top = newPosition.y + 'px';
-    }
-
-    updateCatPosition();
-
-    setInterval(updateCatPosition, 3000);
-});
+    return { x: randomX, y: randomY };
