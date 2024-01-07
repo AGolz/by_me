@@ -36,9 +36,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
     updateCatPosition();
 });
-
-
-    updateCatPosition();
-
-    setInterval(updateCatPosition, 3000);
-});
