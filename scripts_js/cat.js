@@ -1,38 +1,31 @@
 document.addEventListener("DOMContentLoaded", function () {
     var cat = document.getElementById('cat');
+    var screenWidth = window.innerWidth - 50;
+    var catWidth = 50;
 
-    function getRandomPosition() {
-        var screenWidth = window.innerWidth - 50;
+    function getRandomYPosition() {
         var screenHeight = window.innerHeight - 50;
-
-        var randomX = Math.floor(Math.random() * screenWidth);
         var randomY = Math.floor(Math.random() * screenHeight);
-
-        return { x: randomX, y: randomY };
-    }
-
-    function isOverlap(element1, element2) {
-        var rect1 = element1.getBoundingClientRect();
-        var rect2 = element2.getBoundingClientRect();
-
-        return (
-            rect1.left < rect2.right &&
-            rect1.right > rect2.left &&
-            rect1.top < rect2.bottom &&
-            rect1.bottom > rect2.top
-        );
+        return randomY;
     }
 
     function updateCatPosition() {
-        var newPosition = getRandomPosition();
+        var randomY = getRandomYPosition();
+        
+        cat.style.left = '0px';
+        cat.style.top = randomY + 'px';
 
-        if (!isOverlap(cat, content)) {
-            cat.style.left = newPosition.x + 'px';
-            cat.style.top = newPosition.y + 'px';
-        }
+        cat.style.transition = 'left 3s linear';
+        cat.style.left = screenWidth - catWidth + 'px';
 
-        requestAnimationFrame(updateCatPosition);
+        // Reset cat's position after the animation
+        setTimeout(function () {
+            cat.style.transition = 'none';
+            cat.style.left = '0px';
+            requestAnimationFrame(updateCatPosition);
+        }, 3000);
     }
 
     updateCatPosition();
 });
+
