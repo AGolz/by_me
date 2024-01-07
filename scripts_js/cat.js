@@ -1,18 +1,38 @@
-function getRandomPosition() {
-    var screen Width = window.innerWidth - 50;
-    var screenHeight = window.innerHeight - 50;
+document.addEventListener("DOMContentLoaded", function () {
+    function getRandomPosition() {
+        var screenWidth = window.innerWidth - 50;
+        var screenHeight = window.innerHeight - 50;
 
-    var content = document.getElementById('content');
-    var contentRect = content.getBoundingClientRect();
-    var contentWidth = contentRect.width;
-    var contentHeight = contentRect.height;
+        var randomX = Math.floor(Math.random() * screenWidth);
+        var randomY = Math.floor(Math.random() * screenHeight);
 
-    // Calculate the maximum positions without overlapping with the text content
-    var maxX = screen Width - contentWidth;
-    var maxY = screenHeight - contentHeight;
+        return { x: randomX, y: randomY };
+    }
 
-    // Generate random positions within the calculated limits
-    var randomX = Math.floor(Math.random() * maxX);
-    var randomY = Math.floor(Math.random() * maxY);
+    function isOverlap(element1, element2) {
+        var rect1 = element1.getBoundingClientRect();
+        var rect2 = element2.getBoundingClientRect();
 
-    return { x: randomX, y: randomY };
+        return (
+            rect1.left < rect2.right &&
+            rect1.right > rect2.left &&
+            rect1.top < rect2.bottom &&
+            rect1.bottom > rect2.top
+        );
+    }
+
+    function updateCatPosition() {
+        var cat = document.getElementById('cat');
+        var content = document.getElementById('content');
+        var newPosition = getRandomPosition();
+
+        while (isOverlap(cat, content)) {
+            newPosition = getRandomPosition();
+        }
+
+        cat.style.left = newPosition.x + 'px';
+        cat.style.top = newPosition.y + 'px';
+    }
+
+    setInterval(updateCatPosition, 3000);
+});
