@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+    var cat = document.getElementById('cat');
+
     function getRandomPosition() {
         var screenWidth = window.innerWidth - 50;
         var screenHeight = window.innerHeight - 50;
@@ -22,15 +24,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function updateCatPosition() {
-        var cat = document.getElementById('cat');
-        var content = document.getElementById('content');
         var newPosition = getRandomPosition();
 
         if (!isOverlap(cat, content)) {
             cat.style.left = newPosition.x + 'px';
             cat.style.top = newPosition.y + 'px';
         }
+
+        requestAnimationFrame(updateCatPosition);
     }
+
+    updateCatPosition();
+});
+
 
     updateCatPosition();
 
