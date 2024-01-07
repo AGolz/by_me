@@ -1,4 +1,5 @@
-function getRandomPosition() {
+document.addEventListener("DOMContentLoaded", function () {
+    function getRandomPosition() {
         var screenWidth = window.innerWidth - 50;
         var screenHeight = window.innerHeight - 50;
 
@@ -36,3 +37,4 @@ function getRandomPosition() {
     updateCatPosition();
 
     setInterval(updateCatPosition, 3000);
+});
