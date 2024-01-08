@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var catWidth = 50;
     var leftIndentation = 1;
     var rightIndentation = 50;  
-    var appearanceDuration = 6000;
+    var appearanceDuration = 6500;
     var disappearanceInterval = 35000;
 
     function getRandomYPosition() {
