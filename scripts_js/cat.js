@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
     var cat = document.getElementById('cat');
     var catWidth = 50;
     var rightIndentation = 50;
-    var leftIndentation = 90;  
-    var appearanceDuration = 5700;
-    var disappearanceInterval = 30000;
+    var leftIndentation = 90;
+    var appearanceDuration = 7000;
+    var disappearanceInterval = 60000;
 
     function getRandomYPosition() {
         var screenHeight = window.innerHeight - 50;
@@ -33,7 +33,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }, appearanceDuration);
     }
 
+    cat.style.display = 'none';
+
     setTimeout(function () {
+        cat.style.display = 'block';
         updateCatPosition();
         setInterval(updateCatPosition, appearanceDuration + disappearanceInterval);
     }, 30000);
