@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     var cat = document.getElementById('cat');
     var catWidth = 50;
+    var leftIndentation = 20;
+    var appearanceDuration = 7000;
+    var disappearanceInterval = 60000;
 
     function getRandomYPosition() {
         var screenHeight = window.innerHeight - 50;
@@ -13,17 +16,24 @@ document.addEventListener("DOMContentLoaded", function () {
         var screenWidth = window.innerWidth - 50;
 
         if (randomSide === 'left') {
-            cat.style.left = '0px';
+            cat.style.left = leftIndentation + 'px';
         } else {
             cat.style.left = (screenWidth - catWidth) + 'px';
         }
 
         var randomY = getRandomYPosition();
         cat.style.top = randomY + 'px';
+
+        setTimeout(function () {
+            cat.style.display = 'none';
+            setTimeout(function () {
+                cat.style.display = 'block';
+            }, disappearanceInterval);
+        }, appearanceDuration);
     }
 
     updateCatPosition();
 
-    setInterval(updateCatPosition, 3000);
+    setInterval(updateCatPosition, appearanceDuration + disappearanceInterval);
 });
 
