@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     var cat = document.getElementById('cat');
     var catWidth = 50;
-    var leftIndentation = 10;
-    var rightIndentation = 10;  
+    var leftIndentation = 5;
+    var rightIndentation = 30;  
     var appearanceDuration = 8000;
     var disappearanceInterval = 35000;
 
