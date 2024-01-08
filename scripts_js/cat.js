@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var rightIndentation = 50;
     var leftIndentation = 90;
     var appearanceDuration = 5700;
-    var disappearanceInterval = 60000;
+    var disappearanceInterval = 30000;
 
     function getRandomYPosition() {
         var screenHeight = window.innerHeight - 50;
