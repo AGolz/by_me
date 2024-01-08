@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     var cat = document.getElementById('cat');
     var catWidth = 50;
-    var leftIndentation = 0;
     var rightIndentation = 90;  
     var appearanceDuration = 6100;
     var disappearanceInterval = 35000;
@@ -16,12 +15,11 @@ document.addEventListener("DOMContentLoaded", function () {
         var randomSide = Math.random() < 0.5 ? 'left' : 'right';
         var screenWidth = window.innerWidth - 50;
 
-        if (randomSide === 'left') {
-            cat.style.left = leftIndentation + 'px';
+        if (randomSide === 'right') {
+            cat.style.right = rightIndentation + 'px';
         } else {
-            cat.style.left = (screenWidth - catWidth - rightIndentation) + 'px';
+            cat.style.right = (screenWidth - catWidth) + 'px';
         }
-
         var randomY = getRandomYPosition();
         cat.style.top = randomY + 'px';
 
