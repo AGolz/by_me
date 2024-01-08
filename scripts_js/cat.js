@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     var cat = document.getElementById('cat');
     var catWidth = 50;
-    var leftIndentation = 5;
-    var rightIndentation = 30;  
-    var appearanceDuration = 8000;
+    var leftIndentation = 1;
+    var rightIndentation = 50;  
+    var appearanceDuration = 6000;
     var disappearanceInterval = 35000;
 
     function getRandomYPosition() {
