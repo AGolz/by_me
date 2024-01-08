@@ -54,13 +54,3 @@ a {
 #back-to-home:focus {
     text-decoration: underline;
 }
-
-.bottom-inscription {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: #491617;
-            font-family: 'Indie Flower';
-            font-weight: bold;
-            color: #491617;
