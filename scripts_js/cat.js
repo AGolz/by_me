@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
     var cat = document.getElementById('cat');
     var catWidth = 50;
-    var rightIndentation = 60;
+    var rightIndentation = 50;
     var leftIndentation = 90;  
     var appearanceDuration = 6100;
-    var disappearanceInterval = 35000;
+    var disappearanceInterval = 30000;
 
     function getRandomYPosition() {
         var screenHeight = window.innerHeight - 50;
