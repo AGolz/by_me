@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             cat.style.right = (screenWidth - catWidth - leftIndentation) + 'px';
         }
-
         var randomY = getRandomYPosition();
         cat.style.top = randomY + 'px';
 
@@ -32,9 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }, disappearanceInterval);
         }, appearanceDuration);
     }
-
-    setTimeout(function () {
-        updateCatPosition();
-        setInterval(updateCatPosition, appearanceDuration + disappearanceInterval);
-    }, 30000);
-});
+    
+    setInterval(updateCatPosition, appearanceDuration + disappearanceInterval);
+    updateCatPosition();
+})
