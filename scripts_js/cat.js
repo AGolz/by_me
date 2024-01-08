@@ -32,6 +32,9 @@ document.addEventListener("DOMContentLoaded", function () {
             }, disappearanceInterval);
         }, appearanceDuration);
     }
-    updateCatPosition();
-    setInterval(updateCatPosition, appearanceDuration + disappearanceInterval);
+
+    setTimeout(function () {
+        updateCatPosition();
+        setInterval(updateCatPosition, appearanceDuration + disappearanceInterval);
+    }, 30000);
 });
