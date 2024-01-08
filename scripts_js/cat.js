@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (randomSide === 'left') {
             cat.style.left = leftIndentation + 'px';
         } else {
-            cat.style.left = (screenWidth - catWidth - rightIndentation) + 'px';  // Update for right indentation
+            cat.style.left = (screenWidth - catWidth - rightIndentation) + 'px';
         }
 
         var randomY = getRandomYPosition();
