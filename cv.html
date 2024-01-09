@@ -56,14 +56,15 @@
         }
 
         .photo {
-            max-width: 10px;
+            width: 100px; /* Set the fixed width as needed */
             height: auto;
             display: block;
             transition: opacity 0.5s ease-in-out;
+            box-sizing: border-box;
         }
 
         .text-content {
-            width: 70%;
+            width: calc(70% - 100px); /* Adjust the width accordingly */
             text-align: justify;
             display: block;
             transition: opacity 0.5s ease-in-out;
