@@ -67,7 +67,7 @@
             height: auto;
             display: block;
             transition: opacity 0.5s ease-in-out;
-            margin-top: 15px;
+            margin-top: 20px;
         }
 
         .text-content {
@@ -86,6 +86,7 @@
 
         .cv-content.active {
             display: flex;
+        }
 
         #back-to-home {
             margin-top: 20px;
@@ -178,6 +179,7 @@
             
             const selectedContent = document.querySelector(`.cv-content.${section}`);
             selectedContent.classList.add('active');
+        }
     </script>
 </body>
 </html>
