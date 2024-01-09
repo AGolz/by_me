@@ -176,7 +176,6 @@
             cvContents.forEach((content) => {
                 content.classList.remove('active');
             });
-            document.querySelector('.cv-content.professionalDevelopment').classList.add('active');
         });
         
         function showCVContent(section) {
@@ -184,10 +183,9 @@
             cvContents.forEach((content) => {
                 content.classList.remove('active');
             });
-            
             const selectedContent = document.querySelector(`.cv-content.${section}`);
             selectedContent.classList.add('active');
         }
-    </script>
+    </script>       
 </body>
 </html>
