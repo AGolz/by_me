@@ -84,19 +84,6 @@
             font-family: Arial, sans-serif;
         }
 
-        .cv-content {
-            display: none;
-            width: 80%;
-            text-align: justify;
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-        }
-
-        .cv-content.active {
-            display: flex;
-            opacity: 1;
-        }
-
         #back-to-home {
             margin-top: 20px;
             text-decoration: none;
@@ -120,7 +107,7 @@
     <h1>Curriculum Vitae</h1>
 
     <div class="menu">
-        <a href="#" onclick="showCVContent('mainContent')">Main Content</a>
+        <a href="#" onclick="showCVContent('mainContent')">Personal Profile Statement</a>
         <a href="#" onclick="showCVContent('professionalContent')">Professional Development and Projects (2020-Present)</a>
         <a href="#" onclick="showCVContent('educationContent')">Education</a>
         <a href="#" onclick="showCVContent('skillsContent')">Skills</a>
@@ -139,27 +126,27 @@
         </div>
     </div>
     
-    <div class="cv-content professionalDevelopment active" id="professionalContent">
+    <div class="content-container" id="professionalContent">
         <!-- Content for Professional Development and Projects -->
         <p>Professional Development and Projects content</p>
     </div>
 
-    <div class="cv-content education" id="educationContent">
+    <div class="content-container" id="educationContent">
         <!-- Content for Education section -->
         <p>Education content</p>
     </div>
 
-    <div class="cv-content skills" id="skillsContent">
+    <div class="content-container" id="skillsContent">
         <!-- Content for Skills section -->
         <p>Skills content</p>
     </div>
 
-    <div class="cv-content workExperience" id="workExperienceContent">
+    <div class="content-container" id="workExperienceContent">
         <!-- Content for Work Experience section -->
         <p>Work Experience content</p>
     </div>
 
-    <div class="cv-content contacts" id="contactsContent">
+    <div class="content-container" id="contactsContent">
         <!-- Content for Contacts -->
         <p>Contacts content</p>
     </div>
