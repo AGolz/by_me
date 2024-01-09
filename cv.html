@@ -171,6 +171,14 @@
     <a id="back-to-home" href="https://agolz.github.io/by_me/">Back to the Main Page</a>
     <p><strong>© by me 2024</strong></p>
     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cvContents = document.querySelectorAll('.cv-content');
+            cvContents.forEach((content) => {
+                content.classList.remove('active');
+            });
+            document.querySelector('.cv-content.professionalDevelopment').classList.add('active');
+        });
+        
         function showCVContent(section) {
             const cvContents = document.querySelectorAll('.cv-content');
             cvContents.forEach((content) => {
