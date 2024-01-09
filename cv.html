@@ -23,6 +23,26 @@
             margin-top: 20px;
         }
 
+        .table-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+        }
+
+        th, td {
+            padding: 10px;
+            font-family: 'Indie Flower';
+            text-align: center;
+        }
+
+        th {
+            font-size: 1.5em;
+        }
+
         .menu {
             display: flex;
             flex-direction: row;
@@ -106,13 +126,31 @@
     
     <h1>Curriculum Vitae</h1>
 
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>Alyona Golz</th>
+            </tr>
+            <tr>
+                <td>Place of residence: Armenia, Yerevan.</td>
+            </tr>
+            <tr>
+                <td><strong>Mobile:</strong></td>
+                <td>+374 91 406 822</td>
+            </tr>
+            <tr>
+                <td><strong>e-mail:</strong></td>
+                <td>golz.alyona@gmail.com</td>
+            </tr>
+        </table>
+    </div>
+
     <div class="menu">
         <a href="#" onclick="showCVContent('mainContent')">Personal Profile Statement</a>
         <a href="#" onclick="showCVContent('professionalContent')">Professional Development and Projects (2020-Present)</a>
         <a href="#" onclick="showCVContent('educationContent')">Education</a>
         <a href="#" onclick="showCVContent('skillsContent')">Skills</a>
         <a href="#" onclick="showCVContent('workExperienceContent')">Work Experience</a>
-        <a href="#" onclick="showCVContent('contactsContent')">Contacts</a>
     </div>
     
     <div class="content-container active" id="mainContent">
@@ -150,12 +188,6 @@
         </div>
     </div>
 
-    <div class="content-container" id="contactsContent">
-        <div class="text-content">
-            <p>Contacts content</p>
-        </div>
-    </div>
-
     <a id="back-to-home" href="https://agolz.github.io/by_me/">Back to the Main Page</a>
     <p><strong>© by me 2024</strong></p>
     <script>
@@ -170,7 +202,7 @@
         function showCVContent(section) {
             const cvContents = document.querySelectorAll('.content-container');
             cvContents.forEach((content) => {
-                content.style.opacity = 0; // Add this line to set initial opacity
+                content.style.opacity = 0;
                 content.classList.remove('active');
             });
             const selectedContent = document.getElementById(section);
