@@ -67,7 +67,7 @@
             height: auto;
             display: block;
             transition: opacity 0.5s ease-in-out;
-            margin-top: 10px;
+            margin-top: 15px;
         }
 
         .text-content {
@@ -86,7 +86,6 @@
 
         .cv-content.active {
             display: flex;
-        }
 
         #back-to-home {
             margin-top: 20px;
@@ -170,17 +169,15 @@
 
     <a id="back-to-home" href="https://agolz.github.io/by_me/">Back to the Main Page</a>
     <p><strong>© by me 2024</strong></p>
-
     <script>
         function showCVContent(section) {
             const cvContents = document.querySelectorAll('.cv-content');
             cvContents.forEach((content) => {
                 content.classList.remove('active');
             });
-
+            
             const selectedContent = document.querySelector(`.cv-content.${section}`);
             selectedContent.classList.add('active');
-        }
     </script>
 </body>
 </html>
