@@ -55,13 +55,11 @@
             width: 80%;
             margin-top: 5px;
             opacity: 1;
-            visibility: visible;
-            transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+            transition: opacity 0.5s ease-in-out;
         }
 
         .content-container.hide {
             opacity: 0;
-            visibility: hidden;
         }
 
         .photo-container {
@@ -91,14 +89,12 @@
             width: 80%;
             text-align: justify;
             opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+            transition: opacity 0.5s ease-in-out;
         }
 
         .cv-content.active {
             display: flex;
             opacity: 1;
-            visibility: visible;
         }
 
         #back-to-home {
@@ -124,11 +120,12 @@
     <h1>Curriculum Vitae</h1>
 
     <div class="menu">
-        <a href="#" onclick="showCVContent('professionalDevelopment')">Professional Development and Projects (2020-Present)</a>
-        <a href="#" onclick="showCVContent('education')">Education</a>
-        <a href="#" onclick="showCVContent('skills')">Skills</a>
-        <a href="#" onclick="showCVContent('workExperience')">Work Experience</a>
-        <a href="#" onclick="showCVContent('contacts')">Contacts</a>
+        <a href="#" onclick="showCVContent('mainContent')">Main Content</a>
+        <a href="#" onclick="showCVContent('professionalContent')">Professional Development and Projects (2020-Present)</a>
+        <a href="#" onclick="showCVContent('educationContent')">Education</a>
+        <a href="#" onclick="showCVContent('skillsContent')">Skills</a>
+        <a href="#" onclick="showCVContent('workExperienceContent')">Work Experience</a>
+        <a href="#" onclick="showCVContent('contactsContent')">Contacts</a>
     </div>
     
     <div class="content-container" id="mainContent">
@@ -180,15 +177,17 @@
         function showCVContent(section) {
             const cvContents = document.querySelectorAll('.cv-content');
             const mainContent = document.getElementById('mainContent');
-
-            mainContent.classList.add('hide');
             
-            cvContents.forEach((content) => {
-                content.classList.remove('active');
-            });
-
-            const selectedContent = document.getElementById(`${section}Content`);
-            selectedContent.classList.add('active');
+            if (section === 'mainContent') {
+                mainContent.classList.remove('hide');
+            } else {
+                mainContent.classList.add('hide');
+                cvContents.forEach((content) => {
+                    content.classList.remove('active');
+                });
+                const selectedContent = document.getElementById(section);
+                selectedContent.classList.add('active');
+            }
         }
     </script>
 </body>
