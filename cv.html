@@ -115,7 +115,7 @@
         <a href="#" onclick="showCVContent('contactsContent')">Contacts</a>
     </div>
     
-    <div class="content-container" id="mainContent">
+    <div class="content-container active" id="mainContent">
         <div class="photo-container">
             <img class="photo" src="https://raw.githubusercontent.com/AGolz/by_me/main/drawings/IMG_4805.JPG" alt="Photo">
         </div>
@@ -159,6 +159,7 @@
             cvContents.forEach((content) => {
                 content.classList.remove('active');
             });
+            document.getElementById('mainContent').classList.add('active');
         });
         
         function showCVContent(section) {
