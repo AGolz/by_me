@@ -49,7 +49,7 @@
         }
 
         .content-container {
-            display: flex;
+            display: none;
             justify-content: space-between;
             align-items: flex-start;
             width: 80%;
@@ -58,8 +58,8 @@
             transition: opacity 0.5s ease-in-out;
         }
 
-        .content-container.hide {
-            opacity: 0;
+        .content-container.active {
+            display: flex;
         }
 
         .photo-container {
@@ -163,18 +163,11 @@
         
         function showCVContent(section) {
             const cvContents = document.querySelectorAll('.content-container');
-            const mainContent = document.getElementById('mainContent');
-            
-            if (section === 'mainContent') {
-                mainContent.classList.remove('hide');
-            } else {
-                mainContent.classList.add('hide');
-                cvContents.forEach((content) => {
-                    content.classList.remove('active');
-                });
-                const selectedContent = document.getElementById(section);
-                selectedContent.classList.add('active');
-            }
+            cvContents.forEach((content) => {
+                content.classList.remove('active');
+            });
+            const selectedContent = document.getElementById(section);
+            selectedContent.classList.add('active');
         }
     </script>
 </body>
