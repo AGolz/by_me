@@ -24,13 +24,15 @@
         }
 
         .menu {
-            display: flex;
+            display: none;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
             margin-top: 20px;
         }
 
         .menu a {
-            margin: 0 20px;
+            margin: 10px;
             text-decoration: none;
             color: #491617;
             font-weight: bold;
@@ -99,6 +101,14 @@
     
     <h1>Curriculum Vitae</h1>
 
+    <div class="menu">
+        <a href="#" onclick="showCVContent('professionalDevelopment')">Professional Development and Projects (2020-Present)</a>
+        <a href="#" onclick="showCVContent('education')">Education</a>
+        <a href="#" onclick="showCVContent('skills')">Skills</a>
+        <a href="#" onclick="showCVContent('workExperience')">Work Experience</a>
+        <a href="#" onclick="showCVContent('contacts')">Contacts</a>
+    </div>
+
     <div class="content-container">
         <div class="photo"><img src="https://raw.githubusercontent.com/AGolz/by_me/main/drawings/IMG_4805.JPG" alt="Photo"></div>
 
@@ -110,14 +120,6 @@
             Ongoing Learning: Actively pursuing advanced studies at "Ecole 42," with a focus on C and Unix systems, ensuring a continuous evolution in my technical skill set.<br>
             Specialization in C and Unix Systems: Leveraging my studies, I am honing my expertise in C programming language and Unix systems, delving into the intricate details of system architecture and command-line operations. This specialization not only enhances my coding capabilities but also solidifies my understanding of robust, scalable, and efficient software design.<br></p>
         </div>
-    </div>
-
-    <div class="menu">
-        <a href="#" onclick="showCVContent('professionalDevelopment')">Professional Development and Projects (2020-Present)</a>
-        <a href="#" onclick="showCVContent('education')">Education</a>
-        <a href="#" onclick="showCVContent('skills')">Skills</a>
-        <a href="#" onclick="showCVContent('workExperience')">Work Experience</a>
-        <a href="#" onclick="showCVContent('contacts')">Contacts</a>
     </div>
 
     <div class="cv-content professionalDevelopment active">
