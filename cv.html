@@ -32,7 +32,7 @@
         }
 
         .menu a {
-            margin: 0 40px;;
+            margin: 0 40px;
             text-decoration: none;
             color: #491617;
             font-weight: bold;
@@ -47,13 +47,15 @@
         .menu a:focus {
             border-bottom-color: #491617;
         }
-        
+
         .content-container {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
             width: 80%;
             margin-top: 5px;
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
         }
 
         .photo-container {
@@ -82,10 +84,13 @@
             display: none;
             width: 80%;
             text-align: justify;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
         }
 
         .cv-content.active {
             display: flex;
+            opacity: 1;
         }
 
         #back-to-home {
@@ -186,6 +191,6 @@
             const selectedContent = document.querySelector(`.cv-content.${section}`);
             selectedContent.classList.add('active');
         }
-    </script>       
+    </script>
 </body>
 </html>
