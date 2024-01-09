@@ -55,7 +55,13 @@
             width: 80%;
             margin-top: 5px;
             opacity: 1;
-            transition: opacity 0.5s ease-in-out;
+            visibility: visible;
+            transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+        }
+
+        .content-container.hide {
+            opacity: 0;
+            visibility: hidden;
         }
 
         .photo-container {
@@ -85,12 +91,14 @@
             width: 80%;
             text-align: justify;
             opacity: 0;
-            transition: opacity 0.5s ease-in-out;
+            visibility: hidden;
+            transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
         }
 
         .cv-content.active {
             display: flex;
             opacity: 1;
+            visibility: visible;
         }
 
         #back-to-home {
@@ -123,52 +131,38 @@
         <a href="#" onclick="showCVContent('contacts')">Contacts</a>
     </div>
     
-    <div class="content-container">
+    <div class="content-container" id="mainContent">
         <div class="photo-container">
             <img class="photo" src="https://raw.githubusercontent.com/AGolz/by_me/main/drawings/IMG_4805.JPG" alt="Photo">
         </div>
 
         <div class="text-content">
             <p><strong>Personal Profile Statement.</strong><br>
-                <br>
-                Dedicated and results-driven professional with a rich background spanning 12 years in B2C, B2B, and B2G customer service, offering expertise across diverse products and services. My journey reflects a commitment to excellence, from navigating various roles to undertaking a transformative experience at the "Ecole 42" School of Computer Science.
-                <br>
-                Driven by thirst for knowledge, my current focus lies in C and Unix systems, positioning me at the forefront of technological innovation. Notable highlights of my career include:
-                <br>
-                <br>
-                <strong>Tech Transformation</strong>:</strong> Seamlessly transitioning into the realm of autonomous drones, I explored the depths of flying robotics and programming, bringing about a transformative shift in my skill set.
-                <br>
-                <strong>Ongoing Learning:</strong> Actively engaging in advanced studies at "Ecole 42," my commitment extends to continuous evolution, particularly in C and Unix systems, ensuring I stay abreast of industry advancements.
-                <br>
-                <strong>Specialization in C and Unix Systems:</strong> Through dedicated studies, I am refining my proficiency in the C programming language and Unix systems. This involves a deep dive into system architecture and command-line operations, bolstering my ability to design robust, scalable, and efficient software solutions.
-                <br>
-                <br>
-                My proactive approach, coupled with a demonstrated track record of success, positions me as a valuable asset ready to contribute effectively in any dynamic IT environment.
-                <br></p>
+                ---text---</p>
         </div>
     </div>
     
-    <div class="cv-content professionalDevelopment active">
+    <div class="cv-content professionalDevelopment active" id="professionalContent">
         <!-- Content for Professional Development and Projects -->
         <p>Professional Development and Projects content</p>
     </div>
 
-    <div class="cv-content education">
+    <div class="cv-content education" id="educationContent">
         <!-- Content for Education section -->
         <p>Education content</p>
     </div>
 
-    <div class="cv-content skills">
+    <div class="cv-content skills" id="skillsContent">
         <!-- Content for Skills section -->
         <p>Skills content</p>
     </div>
 
-    <div class="cv-content workExperience">
+    <div class="cv-content workExperience" id="workExperienceContent">
         <!-- Content for Work Experience section -->
         <p>Work Experience content</p>
     </div>
 
-    <div class="cv-content contacts">
+    <div class="cv-content contacts" id="contactsContent">
         <!-- Content for Contacts -->
         <p>Contacts content</p>
     </div>
@@ -185,10 +179,15 @@
         
         function showCVContent(section) {
             const cvContents = document.querySelectorAll('.cv-content');
+            const mainContent = document.getElementById('mainContent');
+
+            mainContent.classList.add('hide');
+            
             cvContents.forEach((content) => {
                 content.classList.remove('active');
             });
-            const selectedContent = document.querySelector(`.cv-content.${section}`);
+
+            const selectedContent = document.getElementById(`${section}Content`);
             selectedContent.classList.add('active');
         }
     </script>
