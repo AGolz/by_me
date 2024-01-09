@@ -55,16 +55,19 @@
             width: 80%;
         }
 
+        .photo-container {
+            max-width: 100px; /* Set the maximum width as needed */
+        }
+
         .photo {
-            width: 100px; /* Set the fixed width as needed */
+            width: 100%;
             height: auto;
             display: block;
             transition: opacity 0.5s ease-in-out;
-            box-sizing: border-box;
         }
 
         .text-content {
-            width: calc(70% - 100px); /* Adjust the width accordingly */
+            width: calc(70% - 10px); /* Adjust the width accordingly */
             text-align: justify;
             display: block;
             transition: opacity 0.5s ease-in-out;
@@ -111,7 +114,9 @@
     </div>
 
     <div class="content-container">
-        <div class="photo"><img src="https://raw.githubusercontent.com/AGolz/by_me/main/drawings/IMG_4805.JPG" alt="Photo"></div>
+        <div class="photo-container">
+            <img class="photo" src="https://raw.githubusercontent.com/AGolz/by_me/main/drawings/IMG_4805.JPG" alt="Photo">
+        </div>
 
         <div class="text-content">
             <p><strong>Hi there, I'm Alyona and I'm a developer (:</strong><br>
