@@ -165,11 +165,18 @@
         function showCVContent(section) {
             const cvContents = document.querySelectorAll('.content-container');
             cvContents.forEach((content) => {
+                content.style.opacity = 0; // Add this line to set initial opacity
                 content.classList.remove('active');
             });
             const selectedContent = document.getElementById(section);
             selectedContent.classList.add('active');
+            setTimeout(() => {
+                selectedContent.style.opacity = 1;
+            }, 10); // Delay to ensure transition effect
         }
     </script>
+</body>
+</html>
+
 </body>
 </html>
