@@ -155,14 +155,14 @@
     <p><strong>© by me 2024</strong></p>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const cvContents = document.querySelectorAll('.cv-content');
+            const cvContents = document.querySelectorAll('.content-container');
             cvContents.forEach((content) => {
                 content.classList.remove('active');
             });
         });
         
         function showCVContent(section) {
-            const cvContents = document.querySelectorAll('.cv-content');
+            const cvContents = document.querySelectorAll('.content-container');
             const mainContent = document.getElementById('mainContent');
             
             if (section === 'mainContent') {
