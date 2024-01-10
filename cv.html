@@ -319,7 +319,6 @@
             document.getElementById('mainContent').classList.add('active');
             toggleProfessionalMenu(false);
         });
-
         function showCVContent(section) {
             const cvContents = document.querySelectorAll('.content-container');
             cvContents.forEach((content) => {
@@ -328,13 +327,11 @@
             });
             const selectedContent = document.getElementById(section);
             selectedContent.classList.add('active');
-            const professionalContainer = document.querySelector('.professional-container');
+            
             if (section === 'professionalContent') {
-                toggleProfessionalMenu(true); 
-                professionalContainer.classList.add('active');
+                toggleProfessionalMenu(true);
             } else {
-                toggleProfessionalMenu(false); 
-                professionalContainer.classList.remove('active');
+                toggleProfessionalMenu(false);
             }
             setTimeout(() => {
                 selectedContent.style.opacity = 1;
@@ -343,7 +340,6 @@
                 document.getElementById('professionalText').innerHTML = '<p>Content for Professional Development and Projects</p>';
             }
         }
-
         function toggleProfessionalMenu(show) {
             const professionalMenu = document.getElementById('professionalMenu');
             if (show) {
