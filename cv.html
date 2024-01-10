@@ -62,9 +62,13 @@
         
         .text-content a {
             text-decoration: none;
-            font-weight: bold;
             font-family: Arial, sans-serif;
         }
+
+        text-content a:hover,
+        text-content a:active,
+        text-content a:focus {
+            text-decoration: underline;
 
         table a:hover,
         table a:active,
@@ -74,7 +78,7 @@
 
         .icon {
             position: absolute;
-            left: -20px;
+            left: -30px;
             top: 40%;
             transform: translateY(-50%);
             max-width: 16px;
@@ -134,7 +138,6 @@
         }
 
         .text-content {
-            width: calc(75% - 15px); 
             text-align: justify;
             display: block;
             transition: opacity 0.5s ease-in-out;
@@ -194,7 +197,7 @@
             <img class="photo" src="https://raw.githubusercontent.com/AGolz/by_me/main/drawings/IMG_4805.JPG" alt="Photo">
         </div>
 
-        <div class="text-content">
+        <div class="text-content" width: calc(75% - 15px);>
             <p><strong>Personal Profile Statement.</strong><br>
             <br>
             Dedicated and results-driven professional with a rich background spanning 12 years in B2C, B2B, and B2G customer service, offering expertise across diverse products and services. My journey reflects a commitment to excellence, from navigating various roles to undertaking a transformative experience at the "Ecole 42" School of Computer Science.
@@ -215,7 +218,7 @@
     </div>
     
     <div class="content-container" id="professionalContent">
-        <div class="text-content" style="text-align: center;">
+        <div class="text-content">
         <p><strong>Professional Development and Projects (2020-Present).</strong><br>
         <br>
         In 2020, I accomplished a pivotal milestone in my professional development by completing an advanced Python course and subsequently developing an interactive Telegram bot. This multifaceted bot not only executed a diverse array of commands but also showcased language recognition capabilities in both Russian and English. Notably, the bot provided comprehensive instructions for assembling quadrocopters, supplemented by relevant GitBook links. The project leveraged the pyTelegramBotAPI library for Telegram bot functionality and was seamlessly hosted on the Heroku platform. Robust data storage and management were achieved through MySQL 5.7, utilizing Datagrip for efficient handling.</p>
