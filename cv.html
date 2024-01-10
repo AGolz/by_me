@@ -112,14 +112,14 @@
 
         .content-container {
             display: none;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: flex-start;
             width: 80%;
             margin-top: 5px;
             opacity: 1;
             transition: opacity 0.5s ease-in-out;
         }
-
+        
         .content-container.active {
             display: flex;
         }
@@ -179,6 +179,10 @@
 
         #professionalMenu {
             display: none;
+            position: fixed;
+            top: 0;
+            margin-left: 250px;
+            max-width: 200px;
         }
 
         #professionalContent.active #professionalMenu {
