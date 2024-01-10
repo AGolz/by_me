@@ -170,6 +170,11 @@
         #professionalContent {
             display: flex;
         }
+        
+        .professional-container {
+            display: flex;
+            flex: 1;
+        }
 
         #professionalMenu {
             position: fixed;
@@ -207,13 +212,9 @@
         
         #professionalText {
             flex: 1;
-            margin-left: 80px;
+            margin-left: 20px;
             margin-top: 20px;
             position: relative;
-            z-index: 1;
-            visibility: visible;
-            border: 2px solid red;
-            overflow: auto; /* Add this property */
         }
     </style>
 </head>
@@ -267,7 +268,7 @@
             <br></p>
         </div>
     </div>
-    <div class="content-container" id="professionalContent">
+    <div class="professional-container">
         <div id="professionalMenu">
             <ul>
                 <li>
@@ -289,8 +290,7 @@
                 </li>
             </ul>
             <div id="professionalText" class="text-content">
-                <!-- text content -->
-                <!-- ... -->
+                <p>Content for Professional Development and Projects</p>
             </div>
         </div>
     </div>
