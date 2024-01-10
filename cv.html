@@ -38,21 +38,12 @@
             font-size: 1.5em;
         }
 
-        text_tbl {
+        text_tbl, td{
             text-decoration: none;
             color: #491617;
             font-weight: bold;
             font-family: 'Indie Flower';
             position: relative;
-        }
-        
-        td {
-            text-decoration: none;
-            color: #491617;
-            font-weight: bold;
-            font-family: 'Indie Flower';
-            position: relative;
-            padding-left: 20px;
         }
 
         .icon {
@@ -123,6 +114,10 @@
             transition: opacity 0.5s ease-in-out;
             font-family: Arial, sans-serif;
         }
+        
+        .indented-row td {
+            margin-top: 20px;
+        }
 
         #back-to-home {
             margin-top: 20px;
@@ -149,7 +144,7 @@
                 <h1>Curriculum Vitae</h1>
                 <name_tbl><strong>Alyona Golz</strong></name_tbl><br><text_tbl><img class="icon" src="https://raw.githubusercontent.com/AGolz/by_me/main/drawings/marker.png" alt="Place Icon"><strong>Place of residence: Armenia, Yerevan.</strong></text_tbl>
             </tr>
-            <tr>
+            <tr class="indented-row">
                 <td>
                     <text_tbl><strong><img class="icon" src="https://raw.githubusercontent.com/AGolz/by_me/main/drawings/phone-call.png" alt="Phone Icon">Mobile: +374 91 406 822</strong></text_tbl>
                 </td>
@@ -204,12 +199,14 @@
     </div>
     <div class="table-container">
         <table>
-            <td>
+            <tr class="indented-row">
+                <td>
                     <text_tbl><strong><img class="icon" src="https://raw.githubusercontent.com/AGolz/by_me/main/drawings/download.png.png" alt="Download Icon">download resume</strong></text_tbl>
                 </td>
                 <td>
                     <text_tbl><strong><img class="icon" src="https://raw.githubusercontent.com/AGolz/by_me/main/drawings/download.png.png" alt="Download Icon">download cv</strong></text_tbl>
                 </td>
+            </tr>
         </table>
     </div>
     <a id="back-to-home" href="https://agolz.github.io/by_me/">Back to the Main Page</a>
