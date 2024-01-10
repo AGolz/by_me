@@ -185,8 +185,17 @@
             margin: 0;
         }
 
+         #professionalMenu ul ul {
+            display: none;
+            margin-left: 10px;
+        }
+
         #professionalMenu ul li {
-            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        #professionalMenu ul li:hover ul {
+            display: block;
         }
 
         #professionalText {
@@ -248,24 +257,26 @@
     <div class="content-container" id="professionalContent">
         <div id="professionalMenu">
             <ul>
-                <li onclick="showProjectContent('telegramBotProject')">Python Telegram Bot Project (2020)</li>
-                <ul>
-                    <li onclick="showProjectContent('telegramBot')">- Telegram Bot</li>
-                </ul>
-                <li onclick="showProjectContent('ecole42Projects')">Ecole 42 Projects (2020-Present)</li>
-                <ul>
-                    <li onclick="showProjectContent('libft')">- Libft (C Library)</li>
-                    <li onclick="showProjectContent('ftPrintf')">- ft_printf</li>
-                    <li onclick="showProjectContent('born2beRoot')">- Born2beRoot - Server Setup on Rocky Linux</li>
-                    <li onclick="showProjectContent('getNextLine')">- get_next_line</li>
-                    <li onclick="showProjectContent('pushSwap')">- push_swap</li>
-                    <li onclick="showProjectContent('minitalk')">- minitalk</li>
-                </ul>
+                <li onclick="showProjectContent('telegramBotProject')">Python Telegram Bot Project (2020)
+                    <ul>
+                        <li onclick="showProjectContent('telegramBot')"> Telegram Bot</li>
+                    </ul>
+                </li>
+                <li onclick="showProjectContent('ecole42Projects')">Ecole 42 Projects (2020-Present)
+                    <ul>
+                        <li onclick="showProjectContent('libft')">Libft (C Library)</li>
+                        <li onclick="showProjectContent('ftPrintf')">ft_printf</li>
+                        <li onclick="showProjectContent('born2beRoot')">Born2beRoot - Server Setup on Rocky Linux</li>
+                        <li onclick="showProjectContent('getNextLine')">get_next_line</li>
+                        <li onclick="showProjectContent('pushSwap')">push_swap</li>
+                        <li onclick="showProjectContent('minitalk')">minitalk</li>
+                    </ul>
+                </li>
             </ul>
         </div>
 
         <div id="professionalText" class="text-content">
-            <!-- Your existing text content -->
+            <!-- text content -->
             <!-- ... -->
         </div>
     </div>
@@ -309,7 +320,6 @@
             });
             document.getElementById('mainContent').classList.add('active');
         });
-        
         function showCVContent(section) {
             const cvContents = document.querySelectorAll('.content-container');
             cvContents.forEach((content) => {
@@ -320,6 +330,18 @@
             selectedContent.classList.add('active');
             setTimeout(() => {
                 selectedContent.style.opacity = 1;
+            }, 15);
+        }
+        function showProjectContent(project) {
+            const projects = document.querySelectorAll('.content-container');
+            projects.forEach((projectContent) => {
+                projectContent.style.opacity = 0;
+                projectContent.classList.remove('active');
+            });
+            const selectedProjectContent = document.getElementById(project);
+            selectedProjectContent.classList.add('active');
+            setTimeout(() => {
+                selectedProjectContent.style.opacity = 1;
             }, 15);
         }
     </script>
