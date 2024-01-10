@@ -175,6 +175,8 @@
             width: 200px;
             padding: 10px;
             box-sizing: border-box;
+            display: none;
+            z-index: 1;
         }
 
         #professionalContent.active #professionalMenu {
@@ -218,10 +220,11 @@
             text-decoration: underline;
         }
         
-        #professionalText {
+       #professionalText {
             flex: 1;
-            width: calc(100% - 210px);
-        }
+            width: calc(100% - 200px);
+            margin-left: 200px;
+    }
     </style>
 </head>
 <body>
@@ -275,33 +278,32 @@
         </div>
     </div>
     <div class="content-container" id="professionalContent">
-    <div id="professionalMenu">
-        <ul>
-            <li>
-                <strong>Python Telegram Bot Project (2020)</strong>
-                <ul>
-                    <li><a href="#">Telegram Bot</a></li>
-                </ul>
-            </li>
-            <li>
-                <strong>Ecole 42 Projects (2020-Present)</strong>
-                <ul>
-                    <li><a href="#">Libft (C Library)</a></li>
-                    <li><a href="#">ft_printf</a></li>
-                    <li><a href="#">Born2beRoot - Server Setup on Rocky Linux</a></li>
-                    <li><a href="#">get_next_line</a></li>
-                    <li><a href="#">push_swap</a></li>
-                    <li><a href="#">minitalk</a></li>
-                </ul>
-            </li>
-        </ul>
+        <div id="professionalMenu">
+            <ul>
+                <li>
+                    <strong>Python Telegram Bot Project (2020)</strong>
+                    <ul>
+                        <li><a href="#">Telegram Bot</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Ecole 42 Projects (2020-Present)</strong>
+                    <ul>
+                        <li><a href="#">Libft (C Library)</a></li>
+                        <li><a href="#">ft_printf</a></li>
+                        <li><a href="#">Born2beRoot - Server Setup on Rocky Linux</a></li>
+                        <li><a href="#">get_next_line</a></li>
+                        <li><a href="#">push_swap</a></li>
+                        <li><a href="#">minitalk</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div id="professionalText" class="text-content">
+                <!-- text content -->
+                <!-- ... -->
+            </div>
+        </div>
     </div>
-
-    <div id="professionalText" class="text-content">
-        <!-- text content -->
-        <!-- ... -->
-    </div>
-</div>
     <div class="content-container" id="educationContent">
         <div class="text-content">
             <p>Education content</p>
