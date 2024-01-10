@@ -298,12 +298,18 @@
                 content.style.opacity = 0;
                 content.classList.remove('active');
             });
+            const professionalMenu = document.getElementById('professionalMenu');
+            const professionalText = document.getElementById('professionalText');
+            professionalMenu.classList.remove('active');
+            professionalText.classList.remove('active');
+
             const selectedContent = document.getElementById(section);
             selectedContent.classList.add('active');
             setTimeout(() => {
                 selectedContent.style.opacity = 1;
             }, 15);
         }
+
         function showProjectContent(project) {
             const projects = document.querySelectorAll('.content-container');
             projects.forEach((projectContent) => {
