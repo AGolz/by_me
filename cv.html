@@ -279,18 +279,14 @@
         <div id="professionalMenu">
             <ul>
                 <li>
-                    <!-- Removed onclick attribute and made the text not a link -->
-                    Python Telegram Bot Project (2020)
+                    <strong>Python Telegram Bot Project (2020)</strong>
                     <ul>
-                        <!-- Added href to make it a link -->
                         <li><a href="#">Telegram Bot</a></li>
                     </ul>
                 </li>
                 <li>
-                    <!-- Removed onclick attribute and made the text not a link -->
-                    Ecole 42 Projects (2020-Present)
+                    <strong>Ecole 42 Projects (2020-Present)</strong>
                     <ul>
-                        <!-- Added href to make it a link -->
                         <li><a href="#">Libft (C Library)</a></li>
                         <li><a href="#">ft_printf</a></li>
                         <li><a href="#">Born2beRoot - Server Setup on Rocky Linux</a></li>
@@ -301,10 +297,13 @@
                 </li>
             </ul>
         </div>
-
-        <div id="professionalText" class="text-content">
-            <!-- text content -->
-            <!-- ... -->
+        <div id="telegramBotTextContent" class="content-container">
+            <div class="text-content">
+                <p>
+                    <strong>Python Telegram Bot Project (2020) - Telegram Bot</strong><br>
+                    details about the Python Telegram Bot project.
+                </p>
+            </div>
         </div>
     </div>
     </div>
@@ -341,37 +340,54 @@
     <a id="back-to-home" href="https://agolz.github.io/by_me/">Back to the Main Page</a>
     <p><strong>© by me 2024</strong></p>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const cvContents = document.querySelectorAll('.content-container');
-            cvContents.forEach((content) => {
-                content.classList.remove('active');
-            });
-            document.getElementById('mainContent').classList.add('active');
+        <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const cvContents = document.querySelectorAll('.content-container');
+        cvContents.forEach((content) => {
+            content.style.opacity = 0;
+            content.classList.remove('active');
         });
-        function showCVContent(section) {
-            const cvContents = document.querySelectorAll('.content-container');
-            cvContents.forEach((content) => {
-                content.style.opacity = 0;
-                content.classList.remove('active');
-            });
-            const selectedContent = document.getElementById(section);
-            selectedContent.classList.add('active');
-            setTimeout(() => {
-                selectedContent.style.opacity = 1;
-            }, 15);
-        }
-        function showProjectContent(project) {
-            const projects = document.querySelectorAll('.content-container');
-            projects.forEach((projectContent) => {
-                projectContent.style.opacity = 0;
-                projectContent.classList.remove('active');
-            });
+
+        const professionalContent = document.getElementById('professionalContent');
+        professionalContent.classList.add('active');
+        professionalContent.style.opacity = 1;
+
+        const telegramBotContent = document.getElementById('telegramBotTextContent');
+        telegramBotContent.classList.add('active');
+        telegramBotContent.style.opacity = 1;
+    });
+
+    function showCVContent(section) {
+        const cvContents = document.querySelectorAll('.content-container');
+        cvContents.forEach((content) => {
+            content.style.opacity = 0;
+            content.classList.remove('active');
+        });
+        const selectedContent = document.getElementById(section);
+        selectedContent.classList.add('active');
+        setTimeout(() => {
+            selectedContent.style.opacity = 1;
+        }, 15);
+    }
+
+    function showProjectContent(project) {
+        const projects = document.querySelectorAll('.content-container');
+        projects.forEach((projectContent) => {
+            projectContent.style.opacity = 0;
+            projectContent.classList.remove('active');
+        });
+
+        if (project === 'telegramBotProject') {
+            document.getElementById('telegramBotTextContent').classList.add('active');
+        } else {
             const selectedProjectContent = document.getElementById(project);
             selectedProjectContent.classList.add('active');
             setTimeout(() => {
                 selectedProjectContent.style.opacity = 1;
             }, 15);
         }
+    }
+</script>
     </script>
 </body>
 </html>
