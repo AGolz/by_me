@@ -323,45 +323,47 @@
     <a id="back-to-home" href="https://agolz.github.io/by_me/">Back to the Main Page</a>
     <p><strong>© by me 2024</strong></p>
     <script>
-	document.addEventListener("DOMContentLoaded", function () {
-		const cvContents = document.querySelectorAll('.content-container');
-		cvContents.forEach((content) => {
-            content.classList.remove('active');
-        });
-        document.getElementById('mainContent').classList.add('active');
-		toggleProfessionalMenu(false);
-	});
-	function showCVContent(section) {
-		const cvContents = document.querySelectorAll('.content-container');
-		cvContents.forEach((content) => {
-			content.style.opacity = 0;
-			content.classList.remove('active');
-		});
-		const selectedContent = document.getElementById(section);
-		selectedContent.classList.add('active');
-		const professionalContainer = document.querySelector('.professional-container');
-		if (section === 'professionalContent') {
-			toggleProfessionalMenu(true);
-			professionalContainer.classList.add('active');
-		} else {
+		document.addEventListener("DOMContentLoaded", function () {
+			const cvContents = document.querySelectorAll('.content-container');
+			cvContents.forEach((content) => {
+				content.classList.remove('active');
+			});
+			document.getElementById('mainContent').classList.add('active');
 			toggleProfessionalMenu(false);
-			professionalContainer.classList.remove('active');
+		});
+	
+		function showCVContent(section) {
+			const cvContents = document.querySelectorAll('.content-container');
+			cvContents.forEach((content) => {
+				content.style.opacity = 0;
+				content.classList.remove('active');
+			});
+			const selectedContent = document.getElementById(section);
+			selectedContent.classList.add('active');
+			const professionalContainer = document.querySelector('.professional-container');
+			if (section === 'professionalContent') {
+				toggleProfessionalMenu(true);
+				professionalContainer.classList.add('active');
+			} else {
+				toggleProfessionalMenu(false);
+				professionalContainer.classList.remove('active');
+			}
+			setTimeout(() => {
+				selectedContent.style.opacity = 1;
+			}, 15);
+			if (section === 'professionalContent') {
+				document.getElementById('professionalText').innerHTML = '<p>Content for Professional Development and Projects</p>';
+			}
 		}
-		setTimeout(() => {
-			selectedContent.style.opacity = 1;
-		}, 15);
-		if (section === 'professionalContent') {
-			document.getElementById('professionalText').innerHTML = '<p>Content for Professional Development and Projects</p>';
+	
+		function toggleProfessionalMenu(show) {
+			const professionalMenu = document.getElementById('professionalMenu');
+			if (show) {
+				professionalMenu.classList.add('active');
+			} else {
+				professionalMenu.classList.remove('active');
+			}
 		}
-	}
-	function toggleProfessionalMenu(show) {
-		const professionalMenu = document.getElementById('professionalMenu');
-		if (show) {
-			professionalMenu.classList.add('active');
-		} else {
-			professionalMenu.classList.remove('active');
-		}
-	}
 	</script>
 </body>
 </html>
