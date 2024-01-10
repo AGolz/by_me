@@ -59,7 +59,32 @@
             color: #491617;
             font-family: 'Indie Flower'; 
         }
+        
+        .text-content a {
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+        }
 
+        table a:hover,
+        table a:active,
+        table a:focus {
+            text-decoration: underline;
+        }
+
+        text-content a:hover,
+        text-content a:active,
+        text-content a:focus {
+            text-decoration: underline;
+        }
+
+        .icon {
+            position: absolute;
+            left: -30px;
+            top: 40%;
+            transform: translateY(-50%);
+            max-width: 16px;
+        }
+        
         .menu {
             display: flex;
             flex-direction: row;
@@ -113,48 +138,16 @@
             margin-top: 20px;
         }
 
-        .text-content {
+         .text-content {
             width: calc(75% - 15px); 
             text-align: justify;
             display: block;
             transition: opacity 0.5s ease-in-out;
             font-family: Arial, sans-serif;
         }
-
-        #professionalContent {
-            display: flex;
-            align-items: flex-start; /* Adjusted alignment */
-        }
-
-        #professionalMenu {
-            width: 200px;
-            padding: 10px;
-            box-sizing: border-box;
-            margin-right: 20px; /* Adjusted margin */
-        }
-
-        #professionalContent.active #professionalMenu {
-            display: block;
-        }
-
-        #professionalText {
-            width: calc(100% - 230px); /* Adjusted width */
-        }
-
-        #professionalMenu ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        #professionalMenu ul ul li,
-        #professionalMenu ul ul li:hover {
-            padding-left: 20px;
-        }
-
-        #professionalMenu ul li a {
-            display: block;
-            padding: 5px;
+        
+        .indented-row td {
+            margin-top: 20px;
         }
 
         #back-to-home {
@@ -173,6 +166,62 @@
         #back-to-home:focus {
             text-decoration: underline;
         }
+
+        #professionalContent {
+            display: flex;
+            margin-left: 200px; 
+        }
+
+        #professionalMenu {
+            width: 200px;
+            padding: 10px;
+            box-sizing: border-box;
+            display: none;
+            margin-left: -10px;
+        }
+
+        #professionalContent.active #professionalMenu {
+            display: block;
+        }
+
+        #professionalMenu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #professionalMenu {
+            position: fixed;
+            width: 200px;
+            padding: 10px;
+            box-sizing: border-box;
+            display: none;
+            margin-left: -10px;
+        }
+
+        #professionalContent.active #professionalMenu {
+            display: block;
+        }
+
+        #professionalText {
+            width: calc(100% - 210px);
+        }
+
+        #professionalMenu ul ul li,
+        #professionalMenu ul ul li:hover {
+            padding-left: 20px;
+        }
+        
+        #professionalMenu ul li a {
+            display: block;
+            padding: 5px;
+        }
+
+        #professionalMenu ul li a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
     </style>
 </head>
 <body>
@@ -248,9 +297,12 @@
                 </li>
             </ul>
         </div>
-        <div id="professionalText" class="content-container">
-            <!-- Content for professional section goes here -->
+
+        <div id="professionalText" class="text-content">
+            <!-- text content -->
+            <!-- ... -->
         </div>
+    </div>
     </div>
 
     <div class="content-container" id="educationContent">
@@ -298,18 +350,12 @@
                 content.style.opacity = 0;
                 content.classList.remove('active');
             });
-            const professionalMenu = document.getElementById('professionalMenu');
-            const professionalText = document.getElementById('professionalText');
-            professionalMenu.classList.remove('active');
-            professionalText.classList.remove('active');
-
             const selectedContent = document.getElementById(section);
             selectedContent.classList.add('active');
             setTimeout(() => {
                 selectedContent.style.opacity = 1;
             }, 15);
         }
-
         function showProjectContent(project) {
             const projects = document.querySelectorAll('.content-container');
             projects.forEach((projectContent) => {
