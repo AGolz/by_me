@@ -331,15 +331,18 @@
                 document.getElementById('professionalText').innerHTML = '<p>Content for Professional Development and Projects</p>';
             }
         }
-
         function toggleProfessionalMenu(show) {
             const professionalMenu = document.getElementById('professionalMenu');
-            if (show) {
-                professionalMenu.classList.add('active');
-            } else {
-                professionalMenu.classList.remove('active');
-            }
+            const professionalText = document.getElementById('professionalText');
+    
+        if (show) {
+            professionalMenu.style.display = 'block';
+            professionalText.style.marginLeft = '450px';
+        } else {
+            professionalMenu.style.display = 'none';
+            professionalText.style.marginLeft = '0';
         }
+    }
     </script>
 </body>
 
