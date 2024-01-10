@@ -171,16 +171,6 @@
             display: flex;
         }
 
-        #professionalContent.active #professionalMenu {
-            display: block;
-        }
-
-        #professionalMenu ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
         #professionalMenu {
             position: fixed;
             width: 200px;
@@ -194,8 +184,10 @@
             display: block;
         }
 
-        #professionalText {
-            width: calc(100% - 210px);
+        #professionalMenu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
 
         #professionalMenu ul ul li,
@@ -212,11 +204,12 @@
             text-decoration: underline;
         }
         
-       #professionalText {
+        #professionalText {
             flex: 1;
             width: calc(100% - 200px);
             margin-left: 200px;
-    }
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
