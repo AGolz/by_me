@@ -55,9 +55,31 @@
             padding-top: 30px;
         }
 
+        a {
+            color: #491617;
+            font-family: 'Indie Flower'; 
+        }
+        
+        .text-content a {
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+        }
+
+        table a:hover,
+        table a:active,
+        table a:focus {
+            text-decoration: underline;
+        }
+
+        text-content a:hover,
+        text-content a:active,
+        text-content a:focus {
+            text-decoration: underline;
+        }
+
         .icon {
             position: absolute;
-            left: -20px;
+            left: -30px;
             top: 40%;
             transform: translateY(-50%);
             max-width: 16px;
@@ -116,7 +138,7 @@
             margin-top: 20px;
         }
 
-        .text-content {
+         .text-content {
             width: calc(75% - 15px); 
             text-align: justify;
             display: block;
@@ -124,22 +146,8 @@
             font-family: Arial, sans-serif;
         }
         
-		.indented-row td {
+        .indented-row td {
             margin-top: 20px;
-        }
-
-        .active-link {
-            text-decoration: none;
-            color: #491617;
-            font-weight: bold;
-            font-family: 'Indie Flower';
-            cursor: pointer;
-        }
-
-        .active-link:hover,
-        .active-link:active,
-        .active-link:focus {
-            text-decoration: underline;
         }
 
         #back-to-home {
@@ -158,269 +166,57 @@
         #back-to-home:focus {
             text-decoration: underline;
         }
-    </style>
-</head>
-<body>
-    <div class="table-container">
-        <table>
-            <tr>
-                <h1>Curriculum Vitae</h1>
-                <name_tbl><strong>Alyona Golz</strong></name_tbl><br><text_tbl><img class="icon" src="https://raw.githubusercontent.com/AGolz/by_me/main/drawings/marker.png" alt="Place Icon"><strong>Place of residence: Armenia, Yerevan.</strong></text_tbl>
-            </tr>
-            <tr class="indented-row">
-                <td>
-                    <text_tbl><strong><img class="icon" src="https://raw.githubusercontent.com/AGolz/by_me/main/drawings/phone-call.png" alt="Phone Icon">Mobile: +374 91 406 822</strong></text_tbl>
-                </td>
-                <td>
-                    <text_tbl><strong><img class="icon" src="https://raw.githubusercontent.com/AGolz/by_me/main/drawings/envelope.png" alt="Mail Icon">E-mail: golz.alyona@gmail.com</strong></text_tbl>
-                </td>
-            </tr>
-        </table>
-    </div>
- 
-    <div class="menu">
-        <a href="#" onclick="showCVContent('mainContent')">Personal Profile Statement</a>
-        <a href="#" onclick="showCVContent('professionalContent')">Professional Development and Projects (2020-Present)</a>
-        <a href="#" onclick="showCVContent('educationContent')">Education</a>
-        <a href="#" onclick="showCVContent('skillsContent')">Skills</a>
-        <a href="#" onclick="showCVContent('workExperienceContent')">Work Experience</a>
-    </div>
-    
-    <div class="content-container active" id="mainContent">
-        <div class="photo-container">
-            <img class="photo" src="https://raw.githubusercontent.com/AGolz/by_me/main/drawings/IMG_4805.JPG" alt="Photo">
-        </div>
-
-        <div class="text-content">
-            <p><strong>Personal Profile Statement.</strong><br>
-                ---text---</p>
-        </div>
-    </div>
-    
-    <div class="content-container" id="professionalContent">
-        <div class="text-content">
-            <p>Professional Development and Projects content</p>
-        </div>
-    </div>
-
-    <div class="content-container" id="educationContent">
-        <div class="text-content">
-            <p>Education content</p>
-        </div>
-    </div>
-
-    <div class="content-container" id="skillsContent">
-        <div class="text-content">
-            <p>Skills content</p>
-        </div>
-    </div>
-
-    <div class="content-container" id="workExperienceContent">
-        <div class="text-content">
-            <p>Work Experience content</p>
-        </div>
-    </div>
-    <div class="table-container">
-        <table>
-            <tr class="indented-row">
-                <td>
-                    <a href="your_resume_link_here" class="active-link"><strong><img class="icon" src="https://raw.githubusercontent.com/AGolz/by_me/main/drawings/download.png" alt="Download Icon"> download resume</strong></a>
-                </td>
-                <td>
-                    <a href="your_cv_link_here" class="active-link"><strong><img class="icon" src="https://raw.githubusercontent.com/AGolz/by_me/main/drawings/download.png" alt="Download Icon"> download cv</strong></a>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <a id="back-to-home" href="https://agolz.github.io/by_me/">Back to the Main Page</a>
-    <p><strong>© by me 2024</strong></p>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const cvContents = document.querySelectorAll('.content-container');
-            cvContents.forEach((content) => {
-                content.classList.remove('active');
-            });
-            document.getElementById('mainContent').classList.add('active');
-        });
         
-        function showCVContent(section) {
-            const cvContents = document.querySelectorAll('.content-container');
-            cvContents.forEach((content) => {
-                content.style.opacity = 0;
-                content.classList.remove('active');
-            });
-            const selectedContent = document.getElementById(section);
-            selectedContent.classList.add('active');
-            setTimeout(() => {
-                selectedContent.style.opacity = 1;
-            }, 15);
-        }
-    </script>
-</body>
-</html></html><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap">
-    <link rel="stylesheet" href="styles/styles.css"> 
-    <style>
-        body {
+        #professionalContent {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            min-height: 100vh;
-            margin: 10px; 
+        }
+        
+        .professional-container {
+            display: flex;
+            flex: 1;
+            position: relative;
+        }
+
+        #professionalMenu {
+            display: none;
+        }
+
+        #professionalContent.active + #professionalMenu {
+            display: block;
+            margin-left: 250px;
+            max-width: 200px;
+        }
+        
+        #professionalMenu ul {
+            list-style: none;
             padding: 0;
-            font-family: 'Indie Flower';
-            color: #491617;
-            overflow-y: auto;
+            margin: 0;
         }
 
-        .table-container {
-            text-align: center;
-            width: 80%;
-            margin-bottom: 20px;
-        }
-
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        name_tbl {
-            text-decoration: none;
-            color: #491617;
-            font-weight: bold;
-            font-family: 'Indie Flower';
-            font-size: 1.5em;
-        }
-
-        text_tbl {
-            text-decoration: none;
-            color: #491617;
-            font-weight: bold;
-            font-family: 'Indie Flower';
-            position: relative;
+        #professionalMenu ul ul li,
+        #professionalMenu ul ul li:hover {
+            padding-left: 20px;
         }
         
-        td {
-            text-decoration: none;
-            color: #491617;
-            font-weight: bold;
-            font-family: 'Indie Flower';
-            position: relative;
-            padding-top: 30px;
-        }
-
-        .icon {
-            position: absolute;
-            left: -20px;
-            top: 40%;
-            transform: translateY(-50%);
-            max-width: 16px;
-        }
-        
-        .menu {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .menu a {
-            margin: 0 40px;
-            text-decoration: none;
-            color: #491617;
-            font-weight: bold;
-            font-family: 'Indie Flower';
-            padding-bottom: 5px;
-            border-bottom: 2px solid transparent;
-            cursor: pointer;
-        }
-
-        .menu a:hover,
-        .menu a:active,
-        .menu a:focus {
-            border-bottom-color: #491617;
-        }
-
-        .content-container {
-            display: none;
-            justify-content: space-between;
-            align-items: flex-start;
-            width: 80%;
-            margin-top: 5px;
-            opacity: 1;
-            transition: opacity 0.5s ease-in-out;
-        }
-
-        .content-container.active {
-            display: flex;
-        }
-
-        .photo-container {
-            max-width: 270px; 
-            align-self: flex-start;
-            margin-top: 10px;
-        }
-
-        .photo {
-            width: 100%;
-            height: auto;
+        #professionalMenu ul li a {
             display: block;
-            transition: opacity 0.5s ease-in-out;
-            margin-top: 20px;
+            padding: 5px;
         }
 
-        .text-content {
-            width: calc(75% - 15px); 
-            text-align: justify;
-            display: block;
-            transition: opacity 0.5s ease-in-out;
-            font-family: Arial, sans-serif;
-        }
-        
-		.indented-row td {
-            margin-top: 20px;
-        }
-
-        .active-link {
-            text-decoration: none;
-            color: #491617;
-            font-weight: bold;
-            font-family: 'Indie Flower';
-            cursor: pointer;
-        }
-
-        .active-link:hover,
-        .active-link:active,
-        .active-link:focus {
+        #professionalMenu ul li a:hover {
             text-decoration: underline;
         }
-
-        #back-to-home {
-            margin-top: 20px;
-            text-decoration: none;
-            color: #491617;
-            font-family: 'Indie Flower';
-            padding: 10px;
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-
-        #back-to-home:hover,
-        #back-to-home:active,
-        #back-to-home:focus {
-            text-decoration: underline;
+        
+        #professionalText {
+            flex: 1;
+            margin-left: 250px;
+            position: relative;
+            max-width: calc(100% - 250px);
         }
     </style>
 </head>
 <body>
-    <div class="table-container">
+    <div class="table-container" margin-left:"350px">
         <table>
             <tr>
                 <h1>Curriculum Vitae</h1>
@@ -452,16 +248,49 @@
 
         <div class="text-content">
             <p><strong>Personal Profile Statement.</strong><br>
-                ---text---</p>
+            <br>
+            Dedicated and results-driven professional with a rich background spanning 12 years in B2C, B2B, and B2G customer service, offering expertise across diverse products and services. My journey reflects a commitment to excellence, from navigating various roles to undertaking a transformative experience at the "Ecole 42" School of Computer Science.
+            <br>
+            Driven by thirst for knowledge, my current focus lies in C and Unix systems, positioning me at the forefront of technological innovation. Notable highlights of my career include:
+            <br>
+            <br>
+            <strong>Tech Transformation</strong>:</strong> Seamlessly transitioning into the realm of autonomous drones, I explored the depths of flying robotics and programming, bringing about a transformative shift in my skill set.
+            <br>
+            <strong>Ongoing Learning:</strong> Actively engaging in advanced studies at "Ecole 42," my commitment extends to continuous evolution, particularly in C and Unix systems, ensuring I stay abreast of industry advancements.
+            <br>
+            <strong>Specialization in C and Unix Systems:</strong> Through dedicated studies, I am refining my proficiency in the C programming language and Unix systems. This involves a deep dive into system architecture and command-line operations, bolstering my ability to design robust, scalable, and efficient software solutions.
+            <br>
+            <br>
+            My proactive approach, coupled with a demonstrated track record of success, positions me as a valuable asset ready to contribute effectively in any dynamic IT environment.
+            <br></p>
         </div>
     </div>
-    
-    <div class="content-container" id="professionalContent">
-        <div class="text-content">
-            <p>Professional Development and Projects content</p>
+    <div class="professional-container">
+        <div id="professionalMenu">
+            <ul>
+                <li>
+                    <strong>Python Telegram Bot Project (2020)</strong>
+                    <ul>
+                        <li><a href="#">Telegram Bot</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Ecole 42 Projects (2020-Present)</strong>
+                    <ul>
+                        <li><a href="#">Libft (C Library)</a></li>
+                        <li><a href="#">ft_printf</a></li>
+                        <li><a href="#">Born2beRoot - Server Setup on Rocky Linux</a></li>
+                        <li><a href="#">get_next_line</a></li>
+                        <li><a href="#">push_swap</a></li>
+                        <li><a href="#">minitalk</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div id="professionalText" class="text-content">
+                <p>Content for Professional Development and Projects</p>
+            </div>
         </div>
     </div>
-
     <div class="content-container" id="educationContent">
         <div class="text-content">
             <p>Education content</p>
@@ -483,10 +312,10 @@
         <table>
             <tr class="indented-row">
                 <td>
-                    <a href="your_resume_link_here" class="active-link"><strong><img class="icon" src="https://raw.githubusercontent.com/AGolz/by_me/main/drawings/download.png" alt="Download Icon"> download resume</strong></a>
+                    <text_tbl><a href="resume_link_here" class="active-link"><strong><img class="icon" src="https://raw.githubusercontent.com/AGolz/by_me/main/drawings/download.png" alt="Download Icon">download resume</strong></a></text_tbl>
                 </td>
                 <td>
-                    <a href="your_cv_link_here" class="active-link"><strong><img class="icon" src="https://raw.githubusercontent.com/AGolz/by_me/main/drawings/download.png" alt="Download Icon"> download cv</strong></a>
+                    <text_tbl><a href="cv_link_here" class="active-link"><strong><img class="icon" src="https://raw.githubusercontent.com/AGolz/by_me/main/drawings/download.png" alt="Download Icon"> download cv</strong></a></text_tbl>
                 </td>
             </tr>
         </table>
@@ -500,8 +329,9 @@
                 content.classList.remove('active');
             });
             document.getElementById('mainContent').classList.add('active');
+            toggleProfessionalMenu(false);
         });
-        
+    
         function showCVContent(section) {
             const cvContents = document.querySelectorAll('.content-container');
             cvContents.forEach((content) => {
@@ -510,9 +340,29 @@
             });
             const selectedContent = document.getElementById(section);
             selectedContent.classList.add('active');
+            const professionalContainer = document.querySelector('.professional-container');
+            if (section === 'professionalContent') {
+                toggleProfessionalMenu(true);
+                professionalContainer.classList.add('active');
+            } else {
+                toggleProfessionalMenu(false);
+                professionalContainer.classList.remove('active');
+            }
             setTimeout(() => {
                 selectedContent.style.opacity = 1;
             }, 15);
+            if (section === 'professionalContent') {
+                document.getElementById('professionalText').innerHTML = '<p>Content for Professional Development and Projects</p>';
+            }
+        }
+    
+        function toggleProfessionalMenu(show) {
+            const professionalMenu = document.getElementById('professionalMenu');
+            if (show) {
+                professionalMenu.classList.add('active');
+            } else {
+                professionalMenu.classList.remove('active');
+            }
         }
     </script>
 </body>
