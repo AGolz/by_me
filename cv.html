@@ -51,7 +51,14 @@
             font-weight: bold;
             font-family: 'Indie Flower';
         }
-
+        
+        .icon {
+            position: absolute;
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            max-width: 16px;
+        }
         .menu {
             display: flex;
             flex-direction: row;
@@ -136,11 +143,11 @@
         <table>
             <tr>
                 <h1>Curriculum Vitae</h1>
-                <name_tbl><strong>Alyona Golz</strong></name_tbl><br><text_tbl><strong>Place of residence: Armenia, Yerevan.</strong></text_tbl>
+                <name_tbl><strong>Alyona Golz</strong></name_tbl><br><text_tbl><img class="icon" src="https://raw.githubusercontent.com/AGolz/by_me/main/drawings/marker.png" alt="Place Icon"><strong>Place of residence: Armenia, Yerevan.</strong></text_tbl>
             </tr>
             <tr>
-                <td><strong> Mobile: +374 91 406 822</strong></td>
-                <td><strong> E-mail: golz.alyona@gmail.com</strong></td>
+                <td><img class="icon" src="https://raw.githubusercontent.com/AGolz/by_me/main/drawings/phone-call.png" alt="Phone Icon"><strong> Mobile: +374 91 406 822</strong></td>
+                <td><img class="icon" src="https://raw.githubusercontent.com/AGolz/by_me/main/drawings/envelope.png" alt="Mail Icon"><strong> E-mail: golz.alyona@gmail.com</strong></td>
             </tr>
         </table>
     </div>
