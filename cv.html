@@ -341,29 +341,23 @@
             });
             document.getElementById('mainContent').classList.add('active');
         });
-        function showCVContent(section) {
-            const cvContents = document.querySelectorAll('.content-container');
-            cvContents.forEach((content) => {
-                content.style.opacity = 0;
-                content.classList.remove('active');
-            });
+
+            function showCVContent(section) {
+                const cvContents = document.querySelectorAll('.content-container');
+                cvContents.forEach((content) => {
+                    content.style.opacity = 0;
+                    content.classList.remove('active');
+                });
+
             const selectedContent = document.getElementById(section);
             selectedContent.classList.add('active');
             setTimeout(() => {
                 selectedContent.style.opacity = 1;
             }, 15);
-        }
-        function showProjectContent(project) {
-            const projects = document.querySelectorAll('.content-container');
-            projects.forEach((projectContent) => {
-                projectContent.style.opacity = 0;
-                projectContent.classList.remove('active');
-            });
-            const selectedProjectContent = document.getElementById(project);
-            selectedProjectContent.classList.add('active');
-            setTimeout(() => {
-                selectedProjectContent.style.opacity = 1;
-            }, 15);
+                
+            if (section === 'professionalContent') {
+                document.getElementById('professionalText').innerHTML = '<p>Content for Professional Development and Projects</p>';
+            }
         }
     </script>
 </body>
