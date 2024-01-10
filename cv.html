@@ -176,11 +176,12 @@
             width: 200px;
             padding: 10px;
             box-sizing: border-box;
-            display: none; /* Hide professional menu by default */
+            display: none;
+            margin-left: -10px;
         }
 
         #professionalContent.active #professionalMenu {
-            display: block; /* Display professional menu when professional content is active */
+            display: block;
         }
 
         #professionalMenu ul {
@@ -192,6 +193,7 @@
         #professionalMenu ul li {
             font-weight: bold;
             cursor: pointer;
+            white-space: nowrap;
         }
         
         #professionalMenu ul li:hover {
@@ -207,7 +209,11 @@
         }
 
         #professionalText {
-            width: calc(100% - 200px);
+            width: calc(100% - 210px);
+        }
+        #professionalMenu ul ul li,
+        #professionalMenu ul ul li:hover {
+            padding-left: 20px;
         }
     </style>
 </head>
