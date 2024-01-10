@@ -11,25 +11,22 @@
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            min-height: 100vh;
-            margin: 10px; 
+            margin: 10px;
             padding: 0;
             font-family: 'Indie Flower';
             color: #491617;
             overflow-y: auto;
         }
-
         .table-container {
             text-align: center;
             width: 80%;
             margin-bottom: 20px;
         }
-
         table {
             border-collapse: collapse;
             width: 100%;
         }
-
+        
         name_tbl {
             text-decoration: none;
             color: #491617;
@@ -37,7 +34,6 @@
             font-family: 'Indie Flower';
             font-size: 1.5em;
         }
-
         text_tbl {
             text-decoration: none;
             color: #491617;
@@ -57,9 +53,9 @@
 
         a {
             color: #491617;
-            font-family: 'Indie Flower'; 
+            font-family: 'Indie Flower';
         }
-        
+
         .text-content a {
             text-decoration: none;
             font-family: Arial, sans-serif;
@@ -119,13 +115,13 @@
             opacity: 1;
             transition: opacity 0.5s ease-in-out, margin-top 0.5s ease-in-out;
         }
-        
+
         .content-container.active {
             display: flex;
         }
 
         .photo-container {
-            max-width: 270px; 
+            max-width: 270px;
             align-self: flex-start;
             margin-top: 10px;
         }
@@ -138,14 +134,14 @@
             margin-top: 20px;
         }
 
-         .text-content {
-            width: calc(75% - 15px); 
+        .text-content {
+            width: calc(75% - 15px);
             text-align: justify;
             display: block;
             transition: opacity 0.5s ease-in-out;
             font-family: Arial, sans-serif;
         }
-        
+
         .indented-row td {
             margin-top: 20px;
         }
@@ -159,18 +155,22 @@
             background: none;
             border: none;
             cursor: pointer;
-        }
+        }    
 
         #back-to-home:hover,
         #back-to-home:active,
         #back-to-home:focus {
             text-decoration: underline;
         }
-        
+
+        .professional-container.active #professionalMenu {
+            display: block;
+        }
+
         #professionalContent {
             display: flex;
         }
-        
+
         .professional-container {
             display: flex;
             flex: 1;
@@ -185,12 +185,6 @@
             max-width: 200px;
         }
 
-        #professionalContent.active #professionalMenu {
-            display: block;
-            margin-left: 250px;
-            max-width: 200px;
-        }
-        
         #professionalMenu ul {
             list-style: none;
             padding: 0;
@@ -201,7 +195,7 @@
         #professionalMenu ul ul li:hover {
             padding-left: 20px;
         }
-        
+
         #professionalMenu ul li a {
             display: block;
             padding: 5px;
@@ -210,7 +204,7 @@
         #professionalMenu ul li a:hover {
             text-decoration: underline;
         }
-        
+
         #professionalText {
             flex: 1;
             margin-left: 250px;
@@ -253,30 +247,24 @@
             <p><strong>Personal Profile Statement.</strong></p>
         </div>
     </div>
-    <div class="professional-container">
-        <div id="professionalMenu">
+    <div class="professional-container" id="professionalContent">
+        <div id="professionalMenu" class="menu">
+            <a href="#">Python Telegram Bot Project (2020)</a>
             <ul>
-                <li>
-                    <strong>Python Telegram Bot Project (2020)</strong>
-                    <ul>
-                        <li><a href="#">Telegram Bot</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Ecole 42 Projects (2020-Present)</strong>
-                    <ul>
-                        <li><a href="#">Libft (C Library)</a></li>
-                        <li><a href="#">ft_printf</a></li>
-                        <li><a href="#">Born2beRoot - Server Setup on Rocky Linux</a></li>
-                        <li><a href="#">get_next_line</a></li>
-                        <li><a href="#">push_swap</a></li>
-                        <li><a href="#">minitalk</a></li>
-                    </ul>
-                </li>
+                <li><a href="#">Telegram Bot</a></li>
             </ul>
-            <div id="professionalText" class="text-content">
-                <p>Content for Professional Development and Projects</p>
-            </div>
+            <a href="#">Ecole 42 Projects (2020-Present)</a>
+            <ul>
+                <li><a href="#">Libft (C Library)</a></li>
+                <li><a href="#">ft_printf</a></li>
+                <li><a href="#">Born2beRoot - Server Setup on Rocky Linux</a></li>
+                <li><a href="#">get_next_line</a></li>
+                <li><a href="#">push_swap</a></li>
+                <li><a href="#">minitalk</a></li>
+            </ul>
+        </div>
+        <div id="professionalText" class="text-content">
+            <p>Content for Professional Development and Projects</p>
         </div>
     </div>
     <div class="content-container" id="educationContent">
@@ -319,6 +307,7 @@
             document.getElementById('mainContent').classList.add('active');
             toggleProfessionalMenu(false);
         });
+
         function showCVContent(section) {
             const cvContents = document.querySelectorAll('.content-container');
             cvContents.forEach((content) => {
@@ -327,27 +316,31 @@
             });
             const selectedContent = document.getElementById(section);
             selectedContent.classList.add('active');
-            
+
             if (section === 'professionalContent') {
                 toggleProfessionalMenu(true);
             } else {
                 toggleProfessionalMenu(false);
             }
+
             setTimeout(() => {
                 selectedContent.style.opacity = 1;
             }, 15);
+
             if (section === 'professionalContent') {
                 document.getElementById('professionalText').innerHTML = '<p>Content for Professional Development and Projects</p>';
             }
         }
+
         function toggleProfessionalMenu(show) {
             const professionalMenu = document.getElementById('professionalMenu');
             if (show) {
-                professionalMenu.style.display = 'block';
+                professionalMenu.classList.add('active');
             } else {
-                professionalMenu.style.display = 'none';
+                professionalMenu.classList.remove('active');
             }
         }
     </script>
 </body>
+
 </html>
