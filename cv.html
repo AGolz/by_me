@@ -190,31 +190,38 @@
             margin: 0;
         }
 
-        #professionalMenu ul li {
-            font-weight: bold;
-            cursor: pointer;
-            white-space: nowrap;
-        }
-        
-        #professionalMenu ul li:hover {
-            text-decoration: underline;
-        }
-        
-        #professionalMenu ul ul {
-            margin-left: 10px;
+        #professionalMenu {
+            position: fixed;
+            width: 200px;
+            padding: 10px;
+            box-sizing: border-box;
+            display: none;
+            margin-left: -10px;
         }
 
-        #professionalMenu ul li:hover ul {
+        #professionalContent.active #professionalMenu {
             display: block;
         }
 
         #professionalText {
             width: calc(100% - 210px);
         }
+
         #professionalMenu ul ul li,
         #professionalMenu ul ul li:hover {
             padding-left: 20px;
         }
+        
+        #professionalMenu ul li a {
+            display: block;
+            padding: 5px;
+        }
+
+        #professionalMenu ul li a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
     </style>
 </head>
 <body>
@@ -271,19 +278,25 @@
     <div class="content-container" id="professionalContent">
         <div id="professionalMenu">
             <ul>
-                <li onclick="showProjectContent('telegramBotProject')">Python Telegram Bot Project (2020)
+                <li>
+                    <!-- Removed onclick attribute and made the text not a link -->
+                    Python Telegram Bot Project (2020)
                     <ul>
-                        <li onclick="showProjectContent('telegramBot')"> Telegram Bot</li>
+                        <!-- Added href to make it a link -->
+                        <li><a href="#">Telegram Bot</a></li>
                     </ul>
                 </li>
-                <li onclick="showProjectContent('ecole42Projects')">Ecole 42 Projects (2020-Present)
+                <li>
+                    <!-- Removed onclick attribute and made the text not a link -->
+                    Ecole 42 Projects (2020-Present)
                     <ul>
-                        <li onclick="showProjectContent('libft')">Libft (C Library)</li>
-                        <li onclick="showProjectContent('ftPrintf')">ft_printf</li>
-                        <li onclick="showProjectContent('born2beRoot')">Born2beRoot - Server Setup on Rocky Linux</li>
-                        <li onclick="showProjectContent('getNextLine')">get_next_line</li>
-                        <li onclick="showProjectContent('pushSwap')">push_swap</li>
-                        <li onclick="showProjectContent('minitalk')">minitalk</li>
+                        <!-- Added href to make it a link -->
+                        <li><a href="#">Libft (C Library)</a></li>
+                        <li><a href="#">ft_printf</a></li>
+                        <li><a href="#">Born2beRoot - Server Setup on Rocky Linux</a></li>
+                        <li><a href="#">get_next_line</a></li>
+                        <li><a href="#">push_swap</a></li>
+                        <li><a href="#">minitalk</a></li>
                     </ul>
                 </li>
             </ul>
@@ -293,6 +306,7 @@
             <!-- text content -->
             <!-- ... -->
         </div>
+    </div>
     </div>
 
     <div class="content-container" id="educationContent">
