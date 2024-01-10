@@ -176,6 +176,17 @@
             width: 200px;
             padding: 10px;
             box-sizing: border-box;
+            display: none; /* Hide professional menu by default */
+        }
+
+        #professionalContent.active #professionalMenu {
+            display: block; /* Display professional menu when professional content is active */
+        }
+
+        #professionalMenu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
 
         #professionalMenu ul li {
@@ -188,7 +199,6 @@
         }
         
         #professionalMenu ul ul {
-            display: none;
             margin-left: 10px;
         }
 
