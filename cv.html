@@ -174,15 +174,14 @@
         .professional-container {
             display: flex;
             flex: 1;
+            position: relative;
         }
 
         #professionalMenu {
-            position: fixed;
             width: 200px;
             padding: 10px;
             box-sizing: border-box;
-            margin-left: 0px;
-            margin-top: 20px;
+            top: 0;
         }
 
         #professionalContent.active #professionalMenu {
@@ -191,7 +190,9 @@
         
         #professionalMenu.active,
         #professionalText.active {
-            display: block;
+            position: fixed;
+            margin-left: 250px;
+            max-width: 200px;
         }
 
         #professionalMenu ul {
@@ -216,9 +217,10 @@
         
         #professionalText {
             flex: 1;
-            margin-left: 20px;
+            margin-left: 250px;
             margin-top: 20px;
             position: relative;
+            max-width: calc(100% - 250px);
         }
     </style>
 </head>
