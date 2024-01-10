@@ -249,7 +249,7 @@
             <img class="photo" src="https://raw.githubusercontent.com/AGolz/by_me/main/drawings/IMG_4805.JPG" alt="Photo">
         </div>
 
-        <div class="text-content" >
+        <div class="text-content">
             <p><strong>Personal Profile Statement.</strong><br>
             <br>
             Dedicated and results-driven professional with a rich background spanning 12 years in B2C, B2B, and B2G customer service, offering expertise across diverse products and services. My journey reflects a commitment to excellence, from navigating various roles to undertaking a transformative experience at the "Ecole 42" School of Computer Science.
@@ -332,21 +332,23 @@
                 content.classList.remove('active');
             });
             document.getElementById('mainContent').classList.add('active');
+            toggleProfessionalMenu(false); // Initially hide professionalMenu
         });
+        
         function showCVContent(section) {
             const cvContents = document.querySelectorAll('.content-container');
             cvContents.forEach((content) => {
                 content.style.opacity = 0;
                 content.classList.remove('active');
             });
-            
             const selectedContent = document.getElementById(section);
             selectedContent.classList.add('active');
-            
             const professionalContainer = document.querySelector('.professional-container');
             if (section === 'professionalContent') {
+                toggleProfessionalMenu(true); // Show professionalMenu when switching to the professionalContent section
                 professionalContainer.classList.add('active');
             } else {
+                toggleProfessionalMenu(false); // Hide professionalMenu for other sections
                 professionalContainer.classList.remove('active');
             }
             setTimeout(() => {
@@ -354,6 +356,14 @@
             }, 15);
             if (section === 'professionalContent') {
                 document.getElementById('professionalText').innerHTML = '<p>Content for Professional Development and Projects</p>';
+            }
+        }
+        function toggleProfessionalMenu(show) {
+            const professionalMenu = document.getElementById('professionalMenu');
+            if (show) {
+                professionalMenu.style.display = 'block';
+            } else {
+                professionalMenu.style.display = 'none';
             }
         }
     </script>
