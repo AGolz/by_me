@@ -165,6 +165,7 @@
         #back-to-home:active,
         #back-to-home:focus {
             text-decoration: underline;
+        }
 
         #professionalContent {
             display: flex;
@@ -175,25 +176,22 @@
             width: 200px;
             padding: 10px;
             box-sizing: border-box;
-            background-color: #f0f0f0;
-        }
-
-        #professionalMenu ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
         }
 
         #professionalMenu ul li {
             font-weight: bold;
             cursor: pointer;
         }
-
+        
+        #professionalMenu ul li:hover {
+            text-decoration: underline;
+        }
+        
         #professionalMenu ul ul {
             display: none;
             margin-left: 10px;
         }
-            
+
         #professionalMenu ul li:hover ul {
             display: block;
         }
