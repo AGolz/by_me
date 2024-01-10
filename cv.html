@@ -12,7 +12,7 @@
             align-items: center;
             justify-content: flex-start;
             min-height: 100vh;
-            margin: 10px;
+            margin: 10px; 
             padding: 0;
             font-family: 'Indie Flower';
             color: #491617;
@@ -45,7 +45,7 @@
             font-family: 'Indie Flower';
             position: relative;
         }
-
+        
         td {
             text-decoration: none;
             color: #491617;
@@ -57,9 +57,9 @@
 
         a {
             color: #491617;
-            font-family: 'Indie Flower';
+            font-family: 'Indie Flower'; 
         }
-
+        
         .text-content a {
             text-decoration: none;
             font-family: Arial, sans-serif;
@@ -67,10 +67,13 @@
 
         table a:hover,
         table a:active,
-        table a:focus,
-        .text-content a:hover,
-        .text-content a:active,
-        .text-content a:focus {
+        table a:focus {
+            text-decoration: underline;
+        }
+
+        text-content a:hover,
+        text-content a:active,
+        text-content a:focus {
             text-decoration: underline;
         }
 
@@ -81,7 +84,7 @@
             transform: translateY(-50%);
             max-width: 16px;
         }
-
+        
         .menu {
             display: flex;
             flex-direction: row;
@@ -105,7 +108,6 @@
         .menu a:active,
         .menu a:focus {
             border-bottom-color: #491617;
-            text-decoration: underline;
         }
 
         .content-container {
@@ -123,7 +125,7 @@
         }
 
         .photo-container {
-            max-width: 270px;
+            max-width: 270px; 
             align-self: flex-start;
             margin-top: 10px;
         }
@@ -136,14 +138,14 @@
             margin-top: 20px;
         }
 
-        .text-content {
-            width: calc(75% - 15px);
+         .text-content {
+            width: calc(75% - 15px); 
             text-align: justify;
             display: block;
             transition: opacity 0.5s ease-in-out;
             font-family: Arial, sans-serif;
         }
-
+        
         .indented-row td {
             margin-top: 20px;
         }
@@ -163,11 +165,10 @@
         #back-to-home:active,
         #back-to-home:focus {
             text-decoration: underline;
-        }
 
         #professionalContent {
             display: flex;
-            margin-left: 200px;
+            margin-left: 200px; 
         }
 
         #professionalMenu {
@@ -183,27 +184,26 @@
             margin: 0;
         }
 
-        #professionalMenu ul ul {
-            display: none;
-            margin-left: 10px;
-        }
-
         #professionalMenu ul li {
-            cursor: pointer;
             font-weight: bold;
+            cursor: pointer;
         }
 
         #professionalMenu ul li:hover {
-            text-decoration: underline;
+        text-decoration: underline;
         }
 
         #professionalMenu ul ul {
             display: none;
             margin-left: 10px;
         }
-
+            
         #professionalMenu ul li:hover ul {
             display: block;
+        }
+
+        #professionalText {
+            width: calc(100% - 200px);
         }
     </style>
 </head>
