@@ -178,10 +178,7 @@
         }
 
         #professionalMenu {
-            width: 200px;
-            padding: 10px;
-            box-sizing: border-box;
-            top: 0;
+            display: none;
         }
 
         #professionalContent.active #professionalMenu {
@@ -334,7 +331,7 @@
             document.getElementById('mainContent').classList.add('active');
             toggleProfessionalMenu(false); // Initially hide professionalMenu
         });
-        
+
         function showCVContent(section) {
             const cvContents = document.querySelectorAll('.content-container');
             cvContents.forEach((content) => {
@@ -345,10 +342,10 @@
             selectedContent.classList.add('active');
             const professionalContainer = document.querySelector('.professional-container');
             if (section === 'professionalContent') {
-                toggleProfessionalMenu(true); // Show professionalMenu when switching to the professionalContent section
+                toggleProfessionalMenu(true); 
                 professionalContainer.classList.add('active');
             } else {
-                toggleProfessionalMenu(false); // Hide professionalMenu for other sections
+                toggleProfessionalMenu(false); 
                 professionalContainer.classList.remove('active');
             }
             setTimeout(() => {
@@ -358,6 +355,7 @@
                 document.getElementById('professionalText').innerHTML = '<p>Content for Professional Development and Projects</p>';
             }
         }
+
         function toggleProfessionalMenu(show) {
             const professionalMenu = document.getElementById('professionalMenu');
             if (show) {
