@@ -137,7 +137,8 @@
         .text-content {
             flex: 1;
             margin-top: 15px;
-            margin-left: 40px;
+    		margin-left: 40px;
+            width: calc(100% - 250px);
             text-align: justify;
             transition: opacity 0.5s ease-in-out;
             font-family: Arial, sans-serif;
@@ -176,7 +177,7 @@
             display: flex;
             flex: 1;
             position: relative;
-            width: 80%;
+            width: 100%;
         }
 
         #professionalMenu {
@@ -232,6 +233,26 @@
             position: relative;
             max-width: calc(100% - 200px);
         }
+        
+        .skills-container,
+        .education-container,
+        .work-experience-container {
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 80%;
+            margin-top: 10px;
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out, margin-top 0.5s ease-in-out;
+        }
+
+        .skills-container.active,
+        .education-container.active,
+        .work-experience-container.active {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
     </style>
 </head>
 <body>
@@ -255,8 +276,8 @@
     <div class="menu">
         <a href="#" onclick="showCVContent('mainContent')">Personal Profile Statement</a>
         <a href="#" onclick="showCVContent('professionalContent')">Professional Development and Projects (2020-Present)</a>
-        <a href="#" onclick="showCVContent('skillsContent')">Skills</a>
         <a href="#" onclick="showCVContent('educationContent')">Education</a>
+        <a href="#" onclick="showCVContent('skillsContent')">Skills</a>
         <a href="#" onclick="showCVContent('workExperienceContent')">Work Experience</a>
     </div>
     
@@ -287,16 +308,15 @@
             <div id="professionalText" class="text-content">
         </div>
     </div>
-    
-    <div class="content-container" id="skillsContent">
-        <div class="text-content">
-            <p>Skills content</p>
-        </div>
-    </div>
-    
     <div class="content-container" id="educationContent">
         <div class="text-content">
             <p>Education content</p>
+        </div>
+    </div>
+
+    <div class="content-container" id="skillsContent">
+        <div class="text-content">
+            <p>Skills content</p>
         </div>
     </div>
 
@@ -350,6 +370,12 @@
 
             if (section === 'professionalContent') {
                 document.getElementById('professionalText').innerHTML = '<p>Content for Professional Development and Projects</p>';
+            } else if (section === 'skillsContent') {
+                document.getElementById('skillsContent').innerHTML = '<p>Content for Skills</p>';
+            } else if (section === 'educationContent') {
+                document.getElementById('educationContent').innerHTML = '<p>Content for Education</p>';
+            } else if (section === 'workExperienceContent') {
+                document.getElementById('workExperienceContent').innerHTML = '<p>Content for Work Experience</p>';
             }
         }
         function toggleProfessionalMenu(show) {
