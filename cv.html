@@ -166,7 +166,10 @@
         .professional-container.active #professionalMenu {
             display: block;
         }
-
+        .menu-item {
+            font-family: Arial, sans-serif;
+        }
+        
         #professionalContent {
             display: flex;
         }
@@ -180,8 +183,8 @@
         #professionalMenu {
             display: none;
             position: fixed;
-            top: 20;
-            left: -200;
+            top: 20px;
+            left: 0;
             max-width: 300px;
         }
 
@@ -194,7 +197,6 @@
         #professionalMenu ul ul li,
         #professionalMenu ul ul li:hover {
             padding-left: 20px;
-            font-family: Arial, sans-serif;
         }
         
         #professionalMenu ul li a:hover {
@@ -204,6 +206,7 @@
         #professionalMenu ul li a {
             display: block;
             padding: 5px;
+            text-decoration: none;
         }
 
         #professionalText {
@@ -249,7 +252,7 @@
         </div>
     </div>
     <div class="professional-container" id="professionalContent">
-        <div id="professionalMenu" class="menu">
+        <div id="professionalMenu" class="menu-item">
             <p>Python Telegram Bot Project (2020)</p>
             <ul>
                 <li><a href="#">Telegram Bot</a></li>
