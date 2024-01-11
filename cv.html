@@ -166,9 +166,6 @@
         .professional-container.active #professionalMenu {
             display: block;
         }
-        .menu-item {
-            font-family: Arial, sans-serif;
-        }
         
         #professionalContent {
             display: flex;
@@ -183,9 +180,20 @@
         #professionalMenu {
             display: none;
             position: fixed;
-            top: 320px;
-            left: 100px;
+            top: 100px;
+            left: 20px;
             max-width: 300px;
+        }
+        
+        .menu-item {
+            font-family: Arial, sans-serif;
+            front-weight: bold;
+            mergin-left: 10px;
+        }
+        
+        #professionalMenu p {
+            font-weight: bold;
+            margin-left: 20px;
         }
 
         #professionalMenu ul {
@@ -196,7 +204,7 @@
 
         #professionalMenu ul ul li,
         #professionalMenu ul ul li:hover {
-            padding-left: 20px;
+            padding-left: 30px;
         }
         
         #professionalMenu ul li a:hover {
@@ -213,7 +221,7 @@
             flex: 1;
             margin-left: 250px;
             position: relative;
-            max-width: calc(100% - 250px);
+            max-width: calc(100% - 300px);
         }
     </style>
 </head>
