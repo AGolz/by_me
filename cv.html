@@ -108,7 +108,7 @@
 
         .content-container {
             display: none;
-            flex-direction: column;
+            flex-direction: row;
             align-items: flex-start;
             width: 80%;
             margin-top: 5px;
@@ -135,7 +135,9 @@
         }
 
         .text-content {
-            width: calc(75% - 15px);
+            flex: 1;
+    		margin-left: 40px;
+            width: calc(100% - 250px);
             text-align: justify;
             transition: opacity 0.5s ease-in-out;
             font-family: Arial, sans-serif;
@@ -188,6 +190,11 @@
             font-family: Arial, sans-serif;
             front-weight: bold;
             mergin-left: 10px;
+        }
+
+        .menu-item a {
+            font-weight: normal;
+            font-family: Arial, sans-serif;
         }
         
         #professionalMenu p {
