@@ -326,16 +326,8 @@
     </div>
     <a id="back-to-home" href="https://agolz.github.io/by_me/">Back to the Main Page</a>
     <p><strong>© by me 2024</strong></p>
+    <p><strong>© by me 2024</strong></p>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const cvContents = document.querySelectorAll('.content-container');
-            cvContents.forEach((content) => {
-                content.classList.remove('active');
-            });
-            document.getElementById('mainContent').classList.add('active');
-            toggleProfessionalMenu(false);
-        });
-
         function showCVContent(section) {
             const cvContents = document.querySelectorAll('.content-container');
             cvContents.forEach((content) => {
@@ -345,9 +337,6 @@
 
             const selectedContent = document.getElementById(section);
             selectedContent.classList.add('active');
-            if (section !== 'mainContent') {
-                document.getElementById('mainContent').classList.remove('active');
-            }
             if (section === 'professionalContent') {
                 toggleProfessionalMenu(true);
                 toggleContentContainer(false);
@@ -356,8 +345,8 @@
                 toggleProfessionalMenu(false);
                 toggleContentContainer(true);
                 document.getElementById('professionalText').innerHTML = '';
-                }
             }
+        }
 
         function toggleProfessionalMenu(show) {
             const professionalContainer = document.getElementById('professionalContent');
@@ -379,7 +368,3 @@
     </script>
 </body>
 
-</html>
-
-
-</html>
