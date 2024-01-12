@@ -121,6 +121,8 @@
 
         .content-container.active {
             display: flex;
+            max-height: 1000px;
+            margin-top: 10px;
         }
 
         .photo-container {
@@ -265,7 +267,7 @@
         <a href="#" onclick="showCVContent('workExperienceContent')">Work Experience</a>
     </div>
     
-    <div class="content-container" id="mainContent">
+    <div class="content-container active" id="mainContent">
         <div class="photo-container">
             <img class="photo" src="https://raw.githubusercontent.com/AGolz/by_me/main/drawings/IMG_4805.JPG" alt="Photo">
         </div>
@@ -354,8 +356,8 @@
                 toggleProfessionalMenu(false);
                 toggleContentContainer(true);
                 document.getElementById('professionalText').innerHTML = '';
+                }
             }
-        }
 
         function toggleProfessionalMenu(show) {
             const professionalContainer = document.getElementById('professionalContent');
@@ -376,5 +378,8 @@
         }
     </script>
 </body>
+
+</html>
+
 
 </html>
