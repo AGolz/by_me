@@ -233,26 +233,6 @@
             position: relative;
             max-width: calc(100% - 200px);
         }
-        
-        .skills-container,
-        .education-container,
-        .work-experience-container {
-            display: none;
-            flex-direction: column;
-            align-items: flex-start;
-            width: 80%;
-            margin-top: 10px;
-            opacity: 1;
-            transition: opacity 0.5s ease-in-out, margin-top 0.5s ease-in-out;
-        }
-
-        .skills-container.active,
-        .education-container.active,
-        .work-experience-container.active {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
     </style>
 </head>
 <body>
@@ -370,13 +350,6 @@
 
             if (section === 'professionalContent') {
                 document.getElementById('professionalText').innerHTML = '<p>Content for Professional Development and Projects</p>';
-            } else if (section === 'skillsContent') {
-                document.getElementById('skillsContent').innerHTML = '<p>Content for Skills</p>';
-            } else if (section === 'educationContent') {
-                document.getElementById('educationContent').innerHTML = '<p>Content for Education</p>';
-            } else if (section === 'workExperienceContent') {
-                document.getElementById('workExperienceContent').innerHTML = '<p>Content for Work Experience</p>';
-            }
         }
         function toggleProfessionalMenu(show) {
             const professionalMenu = document.getElementById('professionalMenu');
