@@ -112,6 +112,7 @@
 
        	.content-container {
             display: none;
+            flex-direction: row;
             overflow: hidden;
             width: 80%;
             margin-top: 0;
@@ -327,7 +328,16 @@
     <a id="back-to-home" href="https://agolz.github.io/by_me/">Back to the Main Page</a>
     <p><strong>© by me 2024</strong></p>
     <p><strong>© by me 2024</strong></p>
-    <script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cvContents = document.querySelectorAll('.content-container');
+            cvContents.forEach((content) => {
+                content.classList.remove('active');
+            });
+            document.getElementById('mainContent').classList.add('active');
+            toggleProfessionalMenu(false);
+        });
+
         function showCVContent(section) {
             const cvContents = document.querySelectorAll('.content-container');
             cvContents.forEach((content) => {
@@ -367,4 +377,4 @@
         }
     </script>
 </body>
-
+</html>
