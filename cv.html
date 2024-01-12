@@ -182,7 +182,8 @@
 
         #professionalMenu {
             display: none;
-            position: relative;
+            flex-direction: column;
+            position: blok;
             left: 75px;
             top: 30px;
             max-width: 300px;
@@ -206,6 +207,7 @@
         }
 
         #professionalMenu ul {
+        	display: block;
             list-style: none;
             padding: 0;
             margin: 0;
@@ -227,7 +229,6 @@
         }
 
          #professionalText {
-            flex: 1;
             top: 40px;
             margin-left: 150px;
             position: relative;
@@ -350,9 +351,6 @@
                 selectedContent.style.opacity = 1;
             }, 15);
 
-            if (section === 'professionalContent') {
-                document.getElementById('professionalText').innerHTML = '<p>Content for Professional Development and Projects</p>';
-            }
         }
         function toggleProfessionalMenu(show) {
             const professionalContainer = document.getElementById('professionalContent');
