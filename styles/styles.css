@@ -1,1 +1,59 @@
+body {
+    font-family: 'Indie Flower';
+    margin: 0;
+    padding: 0;
+    background-image: url('https://raw.githubusercontent.com/AGolz/by_me/main/drawings/arsh_2_paper.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
 
+h1 {
+    margin-top: 20px;
+}
+
+nav {
+    padding: 15px;
+    text-align: left;
+    font-family: 'Indie Flower';
+    font-weight: bold;
+    color: #491617;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-family: 'Indie Flower';
+    font-weight: bold;
+    color: #491617;
+}
+
+#back-to-home {
+    margin-top: 20px;
+    text-decoration: none;
+    color: #491617;
+    font-family: 'Indie Flower';
+    padding: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#back-to-home:hover,
+#back-to-home:active,
+#back-to-home:focus {
+    text-decoration: underline;
+}
