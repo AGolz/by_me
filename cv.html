@@ -334,7 +334,6 @@
             document.getElementById('mainContent').classList.add('active');
             toggleProfessionalMenu(false);
         });
-
         function showCVContent(section) {
             const cvContents = document.querySelectorAll('.content-container');
             cvContents.forEach((content) => {
@@ -344,19 +343,18 @@
             });
             const selectedContent = document.getElementById(section);
             selectedContent.classList.add('active');
-
             if (section === 'professionalContent') {
                 toggleProfessionalMenu(true);
+                toggleContentContainer(false);
+                document.getElementById('professionalText').innerHTML = '<p>Content for Professional Development and Projects</p>';
             } else {
                 toggleProfessionalMenu(false);
+                toggleContentContainer(true);
+                document.getElementById('professionalText').innerHTML = ''; // Clear professional text
             }
-
             setTimeout(() => {
                 selectedContent.style.opacity = 1;
             }, 15);
-            if (section === 'professionalContent') {
-                document.getElementById('professionalText').innerHTML = '<p>Content for Professional Development and Projects</p>';
-            }
         }
         function toggleProfessionalMenu(show) {
             const professionalContainer = document.getElementById('professionalContent');
@@ -367,6 +365,14 @@
                 professionalContainer.classList.remove('active');
             }
         }
+        function toggleContentContainer(show) {
+            const contentContainers = document.querySelectorAll('.content-container');
+            if (!show) {
+                contentContainers.forEach((container) => {
+                    container.classList.remove('active');
+                });
+        }
+    }
     </script>
 </body>  
 
