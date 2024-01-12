@@ -115,8 +115,8 @@
             flex-direction: row;
             align-items: start;
             width: 80%;
-            margin-top: 10px;
-            opacity: 1;
+            margin-top: 0;
+            opacity: 0; 
             transition: opacity 0.5s ease-in-out, margin-top 0.5s ease-in-out;
         }
 
@@ -186,7 +186,7 @@
         #professionalMenu {
             display: none;
             flex-direction: column;
-            position: relative; /* Fix the typo here from 'blok' to 'relative' */
+            position: relative;
             left: 75px;
             top: 30px;
             max-width: 300px;
@@ -195,7 +195,7 @@
 
         .menu-item {
             font-family: Arial, sans-serif;
-            font-weight: bold; /* Fix the typo here from 'front-weight' to 'font-weight' */
+            font-weight: bold;
             margin-left: 10px;
         }
 
@@ -354,11 +354,11 @@
             }
             setTimeout(() => {
                 selectedContent.style.opacity = 1;
+                selectedContent.style.marginTop = '10px';
             }, 15);
         }
         function toggleProfessionalMenu(show) {
             const professionalContainer = document.getElementById('professionalContent');
-
             if (show) {
                 professionalContainer.classList.add('active');
             } else {
