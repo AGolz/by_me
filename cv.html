@@ -129,7 +129,7 @@
         .frame-container {
             max-width: 200px;
             align-self: flex-start;
-            margin-top: 50px;
+            margin-top: 70px;
         }
 
         .photo-container {
@@ -154,12 +154,12 @@
             transition: opacity 0.5s ease-in-out;
             font-family: Arial, sans-serif;
         }
-
-	.text-content a:hover,
-	.text-content a:active,
-	.text-content a:focus {
+        
+        .text-content a:hover,
+        .text-content a:active,
+        .text-content a:focus {
 		text-decoration: underline;
-	}	
+        }	
 
         .indented-row td {
             margin-top: 20px;
@@ -201,8 +201,8 @@
             display: none;
             flex-direction: column;
             position: relative;
-            left: 75px;
-            top: 30px;
+            left: 10px;
+            top: 60px;
             max-width: 300px;
             z-index: 999;
         }
@@ -247,9 +247,9 @@
 
         #professionalText {
             top: 40px;
-            margin-left: 150px;
+            margin-left: 50px;
             position: relative;
-            max-width: calc(100% - 200px);
+            max-width: calc(100% - 50px);
         }
     </style>
 </head>
@@ -450,7 +450,7 @@
             });
             document.getElementById('mainContent').classList.add('active');
             toggleProfessionalMenu(false);
-            loadProfessionalContent('Telegram Bot');
+            loadProfessionalContent(false);
         });
 
         function showCVContent(section) {
@@ -499,7 +499,7 @@
                 'Born2beRoot - Server Setup on Rocky Linux': '<p><strong>Born2beRoot - Server Setup on Rocky Linux</strong><br><br>Born 2 be Root involved practical server setup using VirtualBox, Anaconda, LVM, LOOKS, fdisk, ssh, sshd, Bash language, WordPress with Lighttpd, MariaDB, and PHP, complemented by comprehensive documentation on GitHub.<br><br><strong>Tools and Technologies:</strong><ol><li><strong>VirtualBox:</strong> Used for virtualization and testing.</li><li><strong>Anaconda:</strong> Facilitated package management and environment setup.</li><li><strong>Lighttpd:</strong> Deployed as the web server for WordPress.</li><li><strong>MariaDB:</strong> Employed as the relational database management system.</li><li><strong>Bash Scripting:</strong> Utilized for automation and server configuration.</li><li><strong>Security Tools (Fail2Ban):</strong> Implemented for server protection.</li></ol><br><strong>Measurable Achievements:</strong><ol><li>Contributed to the community knowledge base with a detailed guide.</li><li>Received positive feedback for the clarity and effectiveness of the guide.</li></ol><br><br></p>',
                 'get_next_line': '<p><strong>get_next_line</strong><br><br>Addressing the need for versatile file descriptor handling, the get_next_line project provided a robust solution for reading lines from various file descriptors.<br><br><strong>Tools and Technologies:</strong><ol><li><strong>Makefile:</strong> Efficient project compilation and organization.</li><li><strong>gcc:</strong> Used for compilation and linking.</li><li><strong>Memory Leak Detection Tools (Valgrind):</strong> Utilized for ensuring memory efficiency.</li><li><strong>Unit Testing Frameworks (Criterion):</strong> Applied for systematic code testing.</li></ol><br><strong>Measurable Achievements:</strong><ol><li>Achieved high project scores for efficiency and code structure.</li><li>Demonstrated proficiency in handling file descriptors and memory allocation.</li></ol><br><br></p>',
                 'push_swap': '<p><strong>push_swap</strong><br><br>The push_swap project showcased algorithmic efficiency with the implementation of an optimal sorting algorithm for integer stacks.<br><br><strong>Tools and Technologies:</strong><ol><li><strong>Makefile:</strong> Efficient project compilation and organization.</li><li><strong>gcc:</strong> Used for compilation and linking.</li><li><strong>Algorithm Visualization Tools (GraphViz):</strong> Applied for illustrating sorting processes.</li><li><strong>Code Profiling Tools (gprof):</strong> Utilized for analyzing algorithmic performance.</li></ol><br><strong>Measurable Achievements:</strong><ol><li>Achieved optimal sorting performance with minimal instructions.</li><li>Received commendations for code optimization and algorithmic efficiency.</li></ol><br><br></p>',
-                'minitalk': '<p><strong>minitalk</strong><br><br>Minitalk, a minimalistic interprocess communication project utilizing signals, delved into the intricacies of Unix signals and process communication.<br><br><strong>Tools and Technologies:</strong><ol><li><strong>Makefile:</strong> Efficient project compilation and organization.</li><li><strong>gcc:</strong> Used for compilation and linking.</li><li><strong>Signal Handling Techniques:</strong> Implemented for ensuring reliable communication.</li></ol><br><strong>Measurable Achievements:</strong><ol><li>Demonstrated a deep understanding of interprocess communication.</li><li>Achieved high project scores for reliability and signal handling.</li></ol></p>',
+                'minitalk': '<p><strong>minitalk</strong><br><br>Minitalk, a minimalistic interprocess communication project utilizing signals, delved into the intricacies of Unix signals and process communication.<br><br><strong>Tools and Technologies:</strong><ol><li><strong>Makefile:</strong> Efficient project compilation and organization.</li><li><strong>gcc:</strong> Used for compilation and linking.</li><li><strong>Signal Handling Techniques:</strong> Implemented for ensuring reliable communication.</li></ol><br><strong>Measurable Achievements:</strong><ol><li>Demonstrated a deep understanding of interprocess communication.</li><li>Achieved high project scores for reliability and signal handling.</li></ol><br><br><br><br></p>',
             };
             const professionalText = document.getElementById('professionalText');
             const menuItems = document.querySelectorAll('.menu-item a');
@@ -514,5 +514,3 @@
     </script>
 </body>
 </html>
-
-
