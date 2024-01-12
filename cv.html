@@ -350,7 +350,7 @@
             if (section === 'professionalContent') {
                 toggleProfessionalMenu(true);
                 toggleContentContainer(false);
-                document.getElementById('professionalText').innerHTML = '<p>Content for Professional Development and Projects</p>';
+                loadProfessionalContent();
             } else {
                 toggleProfessionalMenu(false);
                 toggleContentContainer(true);
@@ -374,6 +374,24 @@
                     container.classList.remove('active');
                 });
             }
+        }
+        function loadProfessionalContent() {
+            const projects = {
+                'Telegram Bot': '<p>Content for Telegram Bot project</p>',
+                'Libft (C Library)': '<p>Content for Libft (C Library) project</p>',
+                'Born2beRoot - Server Setup on Rocky Linux': '<p>Content for Born2beRoot</p>',
+                'get_next_line': '<p>Content for get_next_line</p>',
+                'push_swap': '<p>Content for push_swap</p>', 
+                'minitalk': '<p>Content for minitalk</p>',
+            };
+            const professionalText = document.getElementById('professionalText');
+            const menuItems = document.querySelectorAll('.menu-item a');
+            menuItems.forEach((link) => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    professionalText.innerHTML = projects[link.textContent] || '';
+                });
+            })
         }
     </script>
 </body>
