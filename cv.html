@@ -328,7 +328,7 @@
     <a id="back-to-home" href="https://agolz.github.io/by_me/">Back to the Main Page</a>
     <p><strong>© by me 2024</strong></p>
     <p><strong>© by me 2024</strong></p>
-      <script>
+    <script>
         document.addEventListener("DOMContentLoaded", function () {
             const cvContents = document.querySelectorAll('.content-container');
             cvContents.forEach((content) => {
@@ -336,6 +336,7 @@
             });
             document.getElementById('mainContent').classList.add('active');
             toggleProfessionalMenu(false);
+            loadProfessionalContent('Telegram Bot');
         });
 
         function showCVContent(section) {
@@ -350,7 +351,7 @@
             if (section === 'professionalContent') {
                 toggleProfessionalMenu(true);
                 toggleContentContainer(false);
-                loadProfessionalContent();
+                loadProfessionalContent('Telegram Bot');
             } else {
                 toggleProfessionalMenu(false);
                 toggleContentContainer(true);
@@ -375,14 +376,15 @@
                 });
             }
         }
-        function loadProfessionalContent() {
+
+        function loadProfessionalContent(defaultProject) {
             const projects = {
                 'Telegram Bot': '<p>Content for Telegram Bot project</p>',
                 'Libft (C Library)': '<p>Content for Libft (C Library) project</p>',
                 'ft_printf': '<p>Content for Libft (C Library) project</p>',
                 'Born2beRoot - Server Setup on Rocky Linux': '<p>Content for Born2beRoot</p>',
                 'get_next_line': '<p>Content for get_next_line</p>',
-                'push_swap': '<p>Content for push_swap</p>', 
+                'push_swap': '<p>Content for push_swap</p>',
                 'minitalk': '<p>Content for minitalk</p>',
             };
             const professionalText = document.getElementById('professionalText');
@@ -392,7 +394,8 @@
                     event.preventDefault();
                     professionalText.innerHTML = projects[link.textContent] || '';
                 });
-            })
+            });
+            professionalText.innerHTML = projects[defaultProject] || '';
         }
     </script>
 </body>
