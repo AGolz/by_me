@@ -124,16 +124,11 @@
         }
 
         .photo-container {
-            display: none;
             max-width: 270px;
             align-self: flex-start;
             margin-top: 10px;
         }
 
-        .content-container.active {
-            display: flex;
-        }
-        
         .photo {
             width: 100%;
             height: auto;
@@ -348,6 +343,9 @@
 
             const selectedContent = document.getElementById(section);
             selectedContent.classList.add('active');
+            if (section !== 'mainContent') {
+                document.getElementById('mainContent').classList.remove('active');
+            }
             if (section === 'professionalContent') {
                 toggleProfessionalMenu(true);
                 toggleContentContainer(false);
