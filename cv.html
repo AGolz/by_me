@@ -486,7 +486,11 @@
             const contentContainers = document.querySelectorAll('.content-container');
             if (!show) {
                 contentContainers.forEach((container) => {
-                    container.classList.remove('active');
+			if (show) {
+                		container.classList.add('active');
+            		} else {
+                		container.classList.remove('active');
+            		}
                 });
             }
         }
