@@ -225,14 +225,16 @@
                 table.classList.remove('fade-in');
                 table.classList.add('fade-out');
                 setTimeout(function () {
-                    table.style.display = 'none';
+                    table.style.opacity = 0;
                 }, 500);
             });
+            
             var selectedTable = document.getElementById(projectId);
             selectedTable.style.display = 'table';
             setTimeout(function () {
                 selectedTable.classList.remove('fade-out');
                 selectedTable.classList.add('fade-in');
+                selectedTable.style.opacity = 1;
             }, 100);
         }
     </script>
