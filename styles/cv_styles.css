@@ -10,11 +10,6 @@ body {
     overflow-y: auto;
 }
 
-.text {
-    text-align: center;
-    color: #491617;
-}
-
 .table-container {
     text-align: center;
     width: 80%;
