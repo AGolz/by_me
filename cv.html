@@ -46,14 +46,6 @@
             position: relative;
         }
 
-	.transition {
-    	    max-height: 0;
-    	    margin-top: 0;
-    	    opacity: 0;
-    	    overflow: hidden;
-    	    transition: max-height 0.5s ease-in-out, margin-top 0.5s ease-in-out, opacity 0.5s ease-in-out;
-	}
-
         td {
             text-decoration: none;
             color: #491617;
@@ -126,14 +118,12 @@
             margin-top: 0;
             max-height: 0;
             transition: max-height 0.5s ease-in-out, margin-top 0.5s ease-in-out;
-	    opacity: 0;
         }
 
         .content-container.active {
             display: flex;
             max-height: 1000px;
             margin-top: 10px;
-	    opacity: 1;
         }
 
         .frame-container {
@@ -464,53 +454,42 @@
         });
 
         function showCVContent(section) {
-		console.log('Clicked on section:', section);
-		const cvContents = document.querySelectorAll('.content-container');
-		cvContents.forEach((content) => {
-			content.style.marginTop = '0';
-			content.classList.remove('active');
-		});
-		const selectedContent = document.getElementById(section);
-		if (selectedContent) {
-			selectedContent.classList.add('active');
-			if (section === 'professionalContent') {
-				toggleProfessionalMenu(true);
-				toggleContentContainer(false);
-				loadProfessionalContent('Telegram Bot');
-			} else {
-				toggleProfessionalMenu(false);
-				toggleContentContainer(true);
-				document.getElementById('professionalText').innerHTML = '';
-			}
-		} else {
-			console.error('Section not found:', section);
-		}
-	}
+            const cvContents = document.querySelectorAll('.content-container');
+            cvContents.forEach((content) => {
+                content.style.marginTop = '0';
+                content.classList.remove('active');
+            });
 
-        function toggleContentContainer(show) {
-		console.log('Toggle Content Container:', show);
-		const contentContainers = document.querySelectorAll('.content-container');
-		contentContainers.forEach((container) => {
-			if (show) {
-				container.classList.add('transition');
-			} else {
-				container.classList.remove('transition');
-			}
-			container.classList[show ? 'add' : 'remove']('active');
-		});
-	}
+            const selectedContent = document.getElementById(section);
+            selectedContent.classList.add('active');
+            if (section === 'professionalContent') {
+                toggleProfessionalMenu(true);
+                toggleContentContainer(false);
+                loadProfessionalContent('Telegram Bot');
+            } else {
+                toggleProfessionalMenu(false);
+                toggleContentContainer(true);
+                document.getElementById('professionalText').innerHTML = '';
+            }
+        }
+
+        function toggleProfessionalMenu(show) {
+            const professionalContainer = document.getElementById('professionalContent');
+            if (show) {
+                professionalContainer.classList.add('active');
+            } else {
+                professionalContainer.classList.remove('active');
+            }
+        }
 
         function toggleContentContainer(show) {
             const contentContainers = document.querySelectorAll('.content-container');
-            contentContainers.forEach((container) => {
-		    if (show) {
-			    container.classList.add('transition');
-		    } else {
-			    container.classList.remove('transition');
-		    }
-		    container.classList[show ? 'add' : 'remove']('active');
-	    });
-	}
+            if (!show) {
+                contentContainers.forEach((container) => {
+                    container.classList.remove('active');
+                });
+            }
+        }
 
         function loadProfessionalContent(defaultProject) {
             const projects = {
