@@ -122,34 +122,5 @@
     <iframe id="cat" src="https://giphy.com/embed/36u002wNemaqTvH7ia" width="50px" height="50px" frameborder="0"></iframe>
     <script src="scripts_js/cat.js"></script>
     <script src="scripts_js/table.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            showProject('born2beRoot');
-        });
-    
-        function showProject(projectId) {
-            var tables = document.querySelectorAll('table');
-
-            tables.forEach(function (table) {
-                table.classList.remove('table-visible');
-                table.classList.add('table-hidden');
-            });
-
-            var selectedTable = document.getElementById(projectId);
-
-            selectedTable.classList.remove('table-hidden');
-            selectedTable.classList.add('table-visible');
-
-            setTimeout(function () {
-                tables.forEach(function (table) {
-                    if (table.id !== projectId) {
-                        table.style.display = 'none';
-                    }
-                });
-
-                selectedTable.style.display = 'table';
-            }, 500);
-        }
-    </script>
 </body>
 </html>
