@@ -118,7 +118,7 @@
             margin-top: 0;
             max-height: 0;
 	    opacity: 0;
-            transition: max-height 0.5s ease-in-out, margin-top 0.5s ease-in-out, opacity 1s ease-in-out;
+            transition: opacity 0.5s ease-in-out; 
         }
 
         .content-container.active {
@@ -153,11 +153,11 @@
             margin-top: 15px;
             margin-left: 40px;
             text-align: justify;
-            transition: opacity 0.5s ease-in-out;
             font-family: Arial, sans-serif;
 	    opacity: 0;
 	    height: 0;
-	    overflow: hidden;    
+	    overflow: hidden;
+	    transition: opacity 0.5s ease-in-out;
         }
         
         .text-content a:hover,
@@ -494,15 +494,9 @@ function toggleProfessionalMenu(show) {
 
 function toggleContentContainer(show) {
     const contentContainers = document.querySelectorAll('.content-container');
-    if (!show) {
-        contentContainers.forEach((container) => {
-            container.classList.remove('active');
-        });
-    } else {
-        contentContainers.forEach((container) => {
-            container.classList.add('active');
-        });
-    }
+    contentContainers.forEach((container) => {
+        container.classList.toggle('active', show);
+    });
 }
 
 function loadProfessionalContent(defaultProject) {
