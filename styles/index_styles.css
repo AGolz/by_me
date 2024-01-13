@@ -49,6 +49,7 @@ a {
 .gifer-container {
     position: relative;
     padding-top: 30%;
+    width: 100%;
 }
 
 .gifer-container iframe {
@@ -70,4 +71,5 @@ a {
   font-family: 'Indie Flower';
   font-weight: bold;
   writing-mode: horizontal-tb;
+  white-space: nowrap;
 }
