@@ -450,7 +450,11 @@
     <a id="back-to-home" href="https://agolz.github.io/by_me/">Back to the Main Page</a>
     <p><strong>© by me 2024</strong></p>
     <script>
-	    function showCVContent(section) {
+	    document.addEventListener("DOMContentLoaded", function () {
+        showCVContent('mainContent'); // Set mainContent as active by default
+    });
+
+    function showCVContent(section) {
         const cvContents = document.querySelectorAll('.content-container');
         cvContents.forEach((content) => {
             content.style.marginTop = '0';
@@ -468,7 +472,7 @@
             document.getElementById('professionalText').innerHTML = '';
         }
     }
-
+	    
     function toggleProfessionalMenu(show) {
         const professionalContainer = document.getElementById('professionalContent');
         if (show) {
