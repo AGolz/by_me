@@ -276,6 +276,26 @@
 	#mainContent .text-content {
 		opacity: 1;
 	}
+
+	.text-content,
+	.frame-container {
+		display: none;
+	}
+
+	.show-on-main {
+		display: flex;
+	}
+	    
+	.show-on-skills {
+		display: flex;
+	}
+
+	#mainContent.active .text-content {
+    		display: flex;
+	}
+	#skillsContent.active .frame-container {
+    		display: flex;
+	}
     </style>
 </head>
 
@@ -306,9 +326,9 @@
     </div>
     
     <div class="content-container" id="mainContent">
-        <div class="photo-container">
-            <img class="photo" src="https://raw.githubusercontent.com/AGolz/by_me/main/drawings/IMG_4805.JPG" alt="Photo">
-        </div>
+        <div class="photo-container show-on-main">
+        	<img class="photo" src="https://raw.githubusercontent.com/AGolz/by_me/main/drawings/IMG_4805.JPG" alt="Photo">
+    	</div>
         <div class="text-content">
             <p>
                 <strong>Personal Profile Statement</strong><br>
@@ -351,9 +371,9 @@
     </div>
     
     <div class="content-container" id="skillsContent">
-            <div class="frame-container">
-                <iframe src="https://github-readme-stats.vercel.app/api/top-langs/?username=agolz&langs_count=20" frameborder="0" scrolling="no" width="100%" height="400"></iframe>
-            </div>
+            <div class="frame-container show-on-skills">
+        	<iframe src="https://github-readme-stats.vercel.app/api/top-langs/?username=agolz&langs_count=20" frameborder="0" scrolling="no" width="100%" height="400"></iframe>
+	    </div>
             <div class="text-content">
             	<p>
                 <strong>Skills</strong><br>
