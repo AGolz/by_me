@@ -493,15 +493,15 @@
                 'minitalk': '<p><strong>minitalk</strong><br><br>Minitalk, a minimalistic interprocess communication project utilizing signals, delved into the intricacies of Unix signals and process communication.<br><br><strong>Tools and Technologies:</strong><ol><li><strong>Makefile:</strong> Efficient project compilation and organization.</li><li><strong>gcc:</strong> Used for compilation and linking.</li><li><strong>Signal Handling Techniques:</strong> Implemented for ensuring reliable communication.</li></ol><br><strong>Measurable Achievements:</strong><ol><li>Demonstrated a deep understanding of interprocess communication.</li><li>Achieved high project scores for reliability and signal handling.</li></ol><br><br><br><br></p>',
             };
             const professionalText = document.getElementById('professionalText');
-        const menuItems = document.querySelectorAll('.menu-item a');
-        menuItems.forEach((link) => {
-            link.addEventListener('click', (event) => {
-                event.preventDefault();
-                professionalText.innerHTML = projects[link.textContent] || '';
-            });
-        });
-        professionalText.innerHTML = projects[defaultProject] || '';
+	    const menuItems = document.querySelectorAll('.menu-item a');
+	    menuItems.forEach((link) => {
+		    link.addEventListener('click', (event) => {
+			    event.preventDefault();
+			    professionalText.innerHTML = projects[link.textContent] || '';
+		    });
+	    });
+	    professionalText.innerHTML = projects[defaultProject] || '';
     }
-</script>
+    </script>
 </body>
 </html>
