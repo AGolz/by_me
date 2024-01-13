@@ -91,6 +91,16 @@
             z-index: 999;
             pointer-events: none;
         }
+        .fade-in {
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+        }
+        
+        .fade-out {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease-in-out;
+        }
     </style>
 </head>
 <body>
@@ -208,5 +218,23 @@
     <iframe id="cat" src="https://giphy.com/embed/36u002wNemaqTvH7ia" width="50px" height="50px" frameborder="0"></iframe>
     <script src="scripts_js/cat.js"></script>
     <script src="scripts_js/table.js"></script>
+    <script>
+        function showProject(projectId) {
+            var tables = document.querySelectorAll('table');
+            tables.forEach(function (table) {
+                table.classList.remove('fade-in');
+                table.classList.add('fade-out');
+                setTimeout(function () {
+                    table.style.display = 'none';
+                }, 500);
+            });
+            var selectedTable = document.getElementById(projectId);
+            selectedTable.style.display = 'table';
+            setTimeout(function () {
+                selectedTable.classList.remove('fade-out');
+                selectedTable.classList.add('fade-in');
+            }, 100);
+        }
+    </script>
 </body>
 </html>
