@@ -242,8 +242,8 @@
                 table.classList.add('table-hidden');
         
                 setTimeout(function () {
-                    table.classList.remove('fade-in');
                     table.style.opacity = 0;
+                    table.style.display = 'none';  // Hide the table after fading out
                 }, 500);
             });
     
