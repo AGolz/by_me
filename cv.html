@@ -558,8 +558,7 @@ function toggleProfessionalMenu(show) {
 function toggleContentContainer(show) {
     const contentContainers = document.querySelectorAll('.content-container');
     contentContainers.forEach((container) => {
-        container.style.maxHeight = show ? '1000px' : '0';
-        container.style.opacity = show ? '1' : '0';
+        container.classList.toggle('active', show);
     });
 }
 
