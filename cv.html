@@ -314,19 +314,16 @@
 		display: flex;
 	}
 	    
-	.show-on-skills {
-		display: flex;
+	.show-on-skills,
+	.show-on-professional {
+		display: none;
 	}
 
-	#mainContent.active .text-content {
-		display: flex;
-	}
-
-	#mainContent.active .photo-container.show-on-main {
-    		display: flex;
-	}
 	
-	#skillsContent.active .frame-container {
+	#mainContent.active .text-content,
+	#mainContent.active .photo-container.show-on-main,
+	#skillsContent.active .frame-container.show-on-skills,
+	#professionalContent.active .frame-container.show-on-professional {
     		display: flex;
 	}
     </style>
@@ -359,7 +356,7 @@
     </div>
     
     <div class="content-container" id="mainContent">
-        <div class="photo-container">
+        <div class="photo-container show-on-main">
         	<img class="photo" src="https://raw.githubusercontent.com/AGolz/by_me/main/drawings/IMG_4805.JPG" alt="Photo">
     	</div>
         <div class="text-content">
@@ -539,6 +536,12 @@ function showCVContent(section) {
     } else {
         toggleProfessionalMenu(false);
         toggleContentContainer(true);
+        document.getElementById('professionalText').innerHTML = '';
+    }
+    if (section === 'mainContent') {
+        toggleContentContainer(true);
+    } else {
+        toggleContentContainer(false);
         document.getElementById('professionalText').innerHTML = '';
     }
 }
