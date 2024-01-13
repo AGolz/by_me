@@ -517,9 +517,10 @@
     </div>
     <a id="back-to-home" href="https://agolz.github.io/by_me/">Back to the Main Page</a>
     <p><strong>© by me 2024</strong></p>
-    <script>
-	    document.addEventListener("DOMContentLoaded", function () {
+<script>
+document.addEventListener("DOMContentLoaded", function () {
     showCVContent('mainContent');
+    loadProfessionalContent('Telegram Bot');
 });
 
 function showCVContent(section) {
@@ -536,22 +537,18 @@ function showCVContent(section) {
     } else {
         toggleProfessionalMenu(false);
         toggleContentContainer(true);
-        document.getElementById('professionalText').innerHTML = '';
-    }
-    if (section === 'mainContent') {
-        toggleContentContainer(true);
-    } else {
-        toggleContentContainer(false);
-        document.getElementById('professionalText').innerHTML = '';
     }
 }
 
 function toggleProfessionalMenu(show) {
     const professionalContainer = document.getElementById('professionalContent');
+    const professionalMenu = document.getElementById('professionalMenu');
     if (show) {
         professionalContainer.classList.add('active');
+        professionalMenu.style.display = 'flex';
     } else {
         professionalContainer.classList.remove('active');
+        professionalMenu.style.display = 'none';
     }
 }
 
@@ -582,6 +579,6 @@ function loadProfessionalContent(defaultProject) {
     });
     professionalText.innerHTML = projects[defaultProject] || '';
 }
-    </script>
+</script>
 </body>
 </html>
