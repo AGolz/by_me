@@ -464,24 +464,28 @@
         });
 
         function showCVContent(section) {
-            const cvContents = document.querySelectorAll('.content-container');
-            cvContents.forEach((content) => {
-                content.style.marginTop = '0';
-                content.classList.remove('active');
-            });
-
-            const selectedContent = document.getElementById(section);
-            selectedContent.classList.add('active');
-            if (section === 'professionalContent') {
-                toggleProfessionalMenu(true);
-                toggleContentContainer(false);
-                loadProfessionalContent('Telegram Bot');
-            } else {
-                toggleProfessionalMenu(false);
-                toggleContentContainer(true);
-                document.getElementById('professionalText').innerHTML = '';
-            }
-        }
+		console.log('Clicked on section:', section);
+		const cvContents = document.querySelectorAll('.content-container');
+		cvContents.forEach((content) => {
+			content.style.marginTop = '0';
+			content.classList.remove('active');
+		});
+		const selectedContent = document.getElementById(section);
+		if (selectedContent) {
+			selectedContent.classList.add('active');
+			if (section === 'professionalContent') {
+				toggleProfessionalMenu(true);
+				toggleContentContainer(false);
+				loadProfessionalContent('Telegram Bot');
+			} else {
+				toggleProfessionalMenu(false);
+				toggleContentContainer(true);
+				document.getElementById('professionalText').innerHTML = '';
+			}
+		} else {
+			console.error('Section not found:', section);
+		}
+	}
 
         function toggleProfessionalMenu(show) {
             const professionalContainer = document.getElementById('professionalContent');
