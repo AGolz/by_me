@@ -234,6 +234,10 @@
     <script src="scripts_js/cat.js"></script>
     <script src="scripts_js/table.js"></script>
     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            showProject('born2beRoot');
+        });
+    
         function showProject(projectId) {
             var tables = document.querySelectorAll('table');
 
