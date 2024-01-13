@@ -41,9 +41,14 @@ nav li {
 a {
     text-decoration: none;
     font-family: 'Indie Flower';
-    text-decoration: underline;
     font-weight: bold;
     color: #491617;
+}
+
+a:hover,
+a:active,
+a:focus {
+    text-decoration: underline;
 }
 
 .gifer-container {
