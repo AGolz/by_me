@@ -50,6 +50,18 @@
             visibility: hidden;
             transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
         }
+        .table-hidden {
+            display: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+        }
+        
+        .table-visible {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+        }
 
         th, td {
             padding: 10px;
@@ -224,16 +236,22 @@
     <script>
         function showProject(projectId) {
             var tables = document.querySelectorAll('table');
+    
             tables.forEach(function (table) {
-                table.classList.remove('fade-in');
-                table.classList.add('fade-out');
+                table.classList.remove('table-visible');
+                table.classList.add('table-hidden');
+        
                 setTimeout(function () {
+                    table.classList.remove('fade-in');
                     table.style.opacity = 0;
                 }, 500);
             });
-            
+    
             var selectedTable = document.getElementById(projectId);
+    
+            selectedTable.classList.remove('table-hidden');
             selectedTable.style.display = 'table';
+    
             setTimeout(function () {
                 selectedTable.classList.remove('fade-out');
                 selectedTable.classList.add('fade-in');
