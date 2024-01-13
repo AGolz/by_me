@@ -198,9 +198,18 @@
             width: 80%;
         }
 
-        .professional-container.active #professionalMenu {
+        .professional-container.active #professionalMenu,
+	.content-container.active .frame-container,
+	.content-container.active .photo-container,
+	.content-container.active .text-content{
             display: flex;
         }
+
+	.content-container:not(.active) .photo-container,
+    	.content-container:not(.active) .frame-container,
+    	.content-container:not(.active) .text-content {
+        	display: none;
+    	}
 
 	.content-container.active {
     	     opacity: 1;
