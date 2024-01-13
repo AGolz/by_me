@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://raw.githubusercontent.com/AGolz/by_me/main/drawings/favicon.png" type="image/png">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> n
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap">
     <link rel="stylesheet" href="styles/index_styles.css">
 </head>
