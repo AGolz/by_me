@@ -21,6 +21,7 @@ h1 {
 nav {
     margin-top: 15px;
     display: flex;
+    flex-direction: column;
     padding: 10px;
     text-align: left;
     font-family: 'Indie Flower';
@@ -76,7 +77,7 @@ a:focus {
 .bottom-inscription {
     display: flex;
     position: absolute;
-    margin-top: 10px;
+    margin-top: 20px;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
