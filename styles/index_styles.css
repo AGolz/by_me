@@ -36,7 +36,7 @@ nav ul {
 }
 
 nav li {
-    display: inline-block;
+    display: block;
     margin: 10px;
     font-size: 1.2em;
 }
@@ -56,34 +56,14 @@ a:focus {
 
 .gifer-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     position: relative;
-    max-height: 70vh;
     padding-top: 25%;
     width: 100%;
-    overflow: auto;
 }
 
 .gifer-container iframe {
     position: absolute;
     width: 100%;
-    height: auto;
-    max-height: 100%;
     background: transparent;
     pointer-events: none;
-}
-
-.bottom-inscription {
-    display: flex;
-    position: absolute;
-    margin-top: 20px;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #491617;
-    font-family: 'Indie Flower';
-    font-weight: bold;
-    writing-mode: horizontal-tb;
-    white-space: nowrap;
 }
