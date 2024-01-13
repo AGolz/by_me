@@ -318,9 +318,12 @@
 		display: flex;
 	}
 
-	#mainContent.active .text-content,
-	#mainContent.active .photo-container {
+	#mainContent.active .text-content {
 		display: flex;
+	}
+
+	#mainContent.active .photo-container.show-on-main {
+    		display: flex;
 	}
 	
 	#skillsContent.active .frame-container {
@@ -356,7 +359,7 @@
     </div>
     
     <div class="content-container" id="mainContent">
-        <div class="photo-container show-on-main">
+        <div class="photo-container">
         	<img class="photo" src="https://raw.githubusercontent.com/AGolz/by_me/main/drawings/IMG_4805.JPG" alt="Photo">
     	</div>
         <div class="text-content">
