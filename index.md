@@ -74,8 +74,8 @@
 <nav>
     <ul>
         <li><a href="https://github.com/AGolz" target="_blank">GitHub</a></li>
-        <li><a href="https://agolz.github.io/by_me/projects" target="_blank">Projects</a></li>
-        <li><a href="https://agolz.github.io/by_me/cv" target="_blank">Curriculum Vitae</a></li>
+        <li><a href="https://agolz.github.io/by_me/projects">Projects</a></li>
+        <li><a href="https://agolz.github.io/by_me/cv">Curriculum Vitae</a></li>
         <li><a href="https://t.me/Alyona_Golz/" target="_blank">Telegram</a></li>
         <li><a href="https://www.linkedin.com/in/agolz/" target="_blank">LinkedIn</a></li>
     </ul>
