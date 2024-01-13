@@ -15,6 +15,10 @@ h1 {
     text-align: center;
 }
 
+.container {
+    width: 80%;
+}
+
 nav {
     padding: 15px;
     text-align: left;
@@ -65,4 +69,5 @@ a {
   color: #491617;
   font-family: 'Indie Flower';
   font-weight: bold;
+  writing-mode: horizontal-tb;
 }
