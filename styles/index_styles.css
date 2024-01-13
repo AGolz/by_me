@@ -19,7 +19,7 @@ h1 {
 
 nav {
     display: flex;
-    padding: 5px;
+    padding: 10px;
     text-align: left;
     font-family: 'Indie Flower';
     font-weight: bold;
@@ -34,7 +34,7 @@ nav ul {
 
 nav li {
     display: block;
-    margin: 5px;
+    margin: 10px;
     font-size: 1.2em;
 }
 
