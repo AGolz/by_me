@@ -487,14 +487,18 @@
 		}
 	}
 
-        function toggleProfessionalMenu(show) {
-            const professionalContainer = document.getElementById('professionalContent');
-            if (show) {
-                professionalContainer.classList.add('active');
-            } else {
-                professionalContainer.classList.remove('active');
-            }
-        }
+        function toggleContentContainer(show) {
+		console.log('Toggle Content Container:', show);
+		const contentContainers = document.querySelectorAll('.content-container');
+		contentContainers.forEach((container) => {
+			if (show) {
+				container.classList.add('transition');
+			} else {
+				container.classList.remove('transition');
+			}
+			container.classList[show ? 'add' : 'remove']('active');
+		});
+	}
 
         function toggleContentContainer(show) {
             const contentContainers = document.querySelectorAll('.content-container');
