@@ -18,6 +18,11 @@ h1 {
     color: #491617;
 }
 
+.text {
+    text-align: center;
+    color: #491617;
+}
+
 nav {
     margin-top: 15px;
     display: flex;
