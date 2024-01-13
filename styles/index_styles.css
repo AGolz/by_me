@@ -13,12 +13,13 @@ body {
 
 h1 {
     display: flex;
-    margin-top: 100px;
+    margin-top: 60px;
     text-align: center;
     color: #491617;
 }
 
 nav {
+    margin-top: 150px;
     display: flex;
     padding: 10px;
     text-align: left;
