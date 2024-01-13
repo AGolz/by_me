@@ -43,9 +43,12 @@
 
         table {
             border-collapse: collapse;
-            width: 80%; /* Adjusted width */
+            width: 80%;
             margin-top: 20px;
             display: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
         }
 
         th, td {
@@ -91,15 +94,15 @@
             z-index: 999;
             pointer-events: none;
         }
+        
         .fade-in {
             opacity: 1;
-            transition: opacity 0.5s ease-in-out;
+            visibility: visible;
         }
         
         .fade-out {
             opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.5s ease-in-out;
+            visibility: hidden;
         }
     </style>
 </head>
