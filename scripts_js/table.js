@@ -1,14 +1,18 @@
+document.addEventListener("DOMContentLoaded", function () {
+  showProject('born2beRoot');
+});
+
 function showProject(projectId) {
   var tables = document.querySelectorAll('table');
 
   tables.forEach(function (table) {
-    table.classList.remove('fade-in');
+    table.classList.remove('fade-in', 'table-visible');
     table.classList.add('fade-out');
   });
 
   var selectedTable = document.getElementById(projectId);
   selectedTable.classList.remove('fade-out');
-  selectedTable.classList.add('fade-in');
+  selectedTable.classList.add('fade-in', 'table-visible');
 
   history.pushState(null, null, `#${projectId}`);
 }
