@@ -23,4 +23,13 @@ function showProject(projectId) {
     
     selectedTable.style.display = 'table';
   }, 500);
+  
+  history.pushState(null, null, `#${projectId}`);
 }
+
+window.onload = function () {
+    var initialFragment = window.location.hash.substring(1);
+    if (initialFragment) {
+        showProject(initialFragment);
+    }
+};
