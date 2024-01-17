@@ -6,13 +6,13 @@ function showProject(projectId) {
   var tables = document.querySelectorAll('table');
 
   tables.forEach(function (table) {
-    table.classList.remove('table-visible');
-    table.classList.add('table-hidden');
+    table.classList.remove('fade-in');
+    table.classList.add('fade-out');
   });
 
   var selectedTable = document.getElementById(projectId);
-  selectedTable.classList.remove('table-hidden');
-  selectedTable.classList.add('table-visible');
+  selectedTable.classList.remove('fade-out');
+  selectedTable.classList.add('fade-in');
 
   history.pushState(null, null, `#${projectId}`);
 }
