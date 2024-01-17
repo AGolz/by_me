@@ -26,10 +26,3 @@ function showProject(projectId) {
   
   history.pushState(null, null, `#${projectId}`);
 }
-
-window.onload = function () {
-    var initialFragment = window.location.hash.substring(1);
-    if (initialFragment) {
-        showProject(initialFragment);
-    }
-};
