@@ -4,7 +4,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     min-height: 100vh;
-    margin: 10px; 
+    margin: 10px;
     padding: 0;
     font-family: 'Indie Flower';
     color: #491617;
@@ -31,28 +31,19 @@ body {
 .project-menu a:active,
 .project-menu a:focus {
     border-bottom-color: #491617;
-        }
+}
 
 table {
     border-collapse: collapse;
     width: 80%;
     margin-top: 20px;
-    display: none;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
-}
-
-.table-hidden {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
-        
+
 .table-visible {
     opacity: 1;
-    transition: opacity 0.5s ease-in-out;
 }
-
 
 th, td {
     padding: 10px;
@@ -68,9 +59,9 @@ td:first-child {
 
 th:last-child,
 td:not(:first-child) {
-  text-align: center;
-  font-weight: normal;
-  font-family: Arial, sans-serif;
+    text-align: center;
+    font-weight: normal;
+    font-family: Arial, sans-serif;
 }
 
 a {
@@ -78,18 +69,12 @@ a {
     font-family: Arial, sans-serif;
 }
 
-table a:hover,
-table a:active,
-table a:focus {
-    text-decoration: underline;
-}
-
 strong {
     font-weight: bold;
     display: block;
     margin-top: 10px;
 }
-        
+
 #cat {
     position: absolute;
     width: 200px;
@@ -97,13 +82,11 @@ strong {
     z-index: 999;
     pointer-events: none;
 }
-        
+
 .fade-in {
     opacity: 1;
-    visibility: visible;
 }
 
 .fade-out {
     opacity: 0;
-    visibility: hidden;
 }
