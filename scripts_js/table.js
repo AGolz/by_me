@@ -14,16 +14,6 @@ function showProject(projectId) {
   selectedTable.classList.remove('table-hidden');
   selectedTable.classList.add('table-visible');
 
-  setTimeout(function () {
-    tables.forEach(function (table) {
-      if (table.id !== projectId) {
-        table.style.display = 'none';
-      }
-    });
-
-    selectedTable.style.display = 'table';
-  }, 500);
-
   history.pushState(null, null, `#${projectId}`);
 }
 
