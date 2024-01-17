@@ -1,7 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-  showProject('born2beRoot');
-});
-
 function showProject(projectId) {
   var tables = document.querySelectorAll('table');
 
