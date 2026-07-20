@@ -1,5 +1,13 @@
-document.addEventListener("DOMContentLoaded", function() {
-  showProject('born2beRoot');
+document.addEventListener("DOMContentLoaded", function () {
+    const hash = window.location.hash.substring(1);
+    showProject(document.getElementById(hash) ? hash : "born2beRoot");
+});
+
+window.addEventListener("hashchange", function () {
+    const hash = window.location.hash.substring(1);
+    if (document.getElementById(hash)) {
+        showProject(hash);
+    }
 });
 
 function showProject(projectId) {
