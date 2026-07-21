@@ -125,7 +125,14 @@ text-content a:focus {
     flex: 0 0 200px;
     max-width: 200px;
     margin-right: 20px;
+    align-self: flex-start;
     transform: translateY(50px);
+}
+
+.frame-container iframe {
+    display: block;
+    width: 100%;
+    height: 500px;
 }
 
 #skillsContent.active {
