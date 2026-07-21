@@ -226,6 +226,7 @@ text-content a:focus {
     display: none;
     flex-direction: column;
     margin-left: 10px;
+    margin-top: 50px;
     width: 300px;
     flex-shrink: 0;
 }
