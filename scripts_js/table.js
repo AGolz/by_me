@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const hash = window.location.hash.substring(1);
-    showProject(document.getElementById(hash) ? hash : "born2beRoot");
+    showProject(document.getElementById(hash) ? hash : "Arctic_UAV");
 });
 
 window.addEventListener("hashchange", function () {
