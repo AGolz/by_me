@@ -200,7 +200,7 @@ text-content a:focus {
     overflow: visible;
     position: relative;
     width: 80%;
-    height: 0;
+    height: auto;
     opacity: 0;
     visibility: hidden;
 }
@@ -209,7 +209,7 @@ text-content a:focus {
     display: flex;
     height: auto;
     min-height: 0;
-    margin-top: 10px;
+    margin-top: 50px;
     margin-bottom: 30px;
     opacity: 1;
     visibility: visible;
