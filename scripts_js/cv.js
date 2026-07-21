@@ -67,7 +67,7 @@ function loadProfessionalContent(defaultProject) {
   menuItems.forEach((link) => {
     link.addEventListener('click', (event) => {
       event.preventDefault();
-      professionalText.innerHTML = projects[link.textContent] || '';
+      professionalText.innerHTML = projects[link.dataset.project] || '';
     });
   });
   professionalText.innerHTML = projects[defaultProject] || '';
