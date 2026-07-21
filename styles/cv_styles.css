@@ -125,8 +125,7 @@ text-content a:focus {
     flex: 0 0 200px;
     max-width: 200px;
     margin-right: 20px;
-    position: relative;
-    top: 45px;
+    margin-top: 50px;
 }
 
 .frame-container iframe {
