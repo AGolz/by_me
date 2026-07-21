@@ -128,6 +128,11 @@ text-content a:focus {
     margin-top: 50px;
 }
 
+#skillsContent.active {
+    height: auto;
+    min-height: 500px;
+}
+
 .photo-container {
     max-width: 270px;
     align-self: flex-start;
