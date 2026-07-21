@@ -20,7 +20,7 @@ function showCVContent(section) {
   if (section === 'professionalContent') {
     toggleProfessionalMenu(true);
     toggleContentContainer(false);
-    loadProfessionalContent('Telegram Bot');
+    loadProfessionalContent('Arctic UAV with Buoy Deployment System');
   } else {
     toggleProfessionalMenu(false);
     toggleContentContainer(true);
