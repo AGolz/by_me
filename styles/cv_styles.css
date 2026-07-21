@@ -184,7 +184,6 @@ text-content a:focus {
 .professional-container {
     display: flex;
     overflow: visible;
-    flex: 1;
     position: relative;
     width: 80%;
     height: 0;
@@ -193,11 +192,13 @@ text-content a:focus {
 }
 
 .professional-container.active {
-      display: flex;
-      height: auto;
-      margin-top: 10px;
-      opacity: 1;
-      visibility: visible;
+    display: flex;
+    height: auto;
+    min-height: 0;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    opacity: 1;
+    visibility: visible;
 }
 
 .professional-container.active #professionalMenu {
@@ -205,13 +206,11 @@ text-content a:focus {
 }
 
 #professionalMenu {
-      display: none;
-      flex-direction: column;
-      position: relative;
-      left: 10px;
-      top: 70px;
-      max-width: 300px;
-      z-index: 999;
+    display: none;
+    flex-direction: column;
+    margin-left: 10px;
+    width: 300px;
+    flex-shrink: 0;
 }
 
 .menu-item {
