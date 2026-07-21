@@ -212,7 +212,7 @@ text-content a:focus {
     display: flex;
     height: auto;
     min-height: 0;
-    margin-top: 50px;
+    margin-top: 10px;
     margin-bottom: 30px;
     opacity: 1;
     visibility: visible;
@@ -226,7 +226,7 @@ text-content a:focus {
     display: none;
     flex-direction: column;
     margin-left: 10px;
-    margin-top: 50px;
+    margin-top: 40px;   /* только меню вниз */
     width: 300px;
     flex-shrink: 0;
 }
