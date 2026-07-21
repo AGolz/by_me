@@ -6,7 +6,8 @@ body {
     background-size: cover;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 h1 {
