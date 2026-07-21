@@ -122,11 +122,9 @@ text-content a:focus {
 }
 
 .frame-container {
-    min-width: 320px;
-    max-width: 320px;
-    flex-shrink: 0;
-    align-self: flex-start;
-    margin-top: 50px;
+    flex: 0 0 200px;
+    max-width: 200px;
+    margin-right: 20px;
 }
 
 .photo-container {
