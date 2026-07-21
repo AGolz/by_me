@@ -125,8 +125,9 @@ text-content a:focus {
     flex: 0 0 200px;
     max-width: 200px;
     margin-right: 20px;
+    margin-top: 50px;
     align-self: flex-start;
-    transform: translateY(50px);
+    transform: none;
 }
 
 .frame-container iframe {
@@ -137,7 +138,8 @@ text-content a:focus {
 
 #skillsContent.active {
     height: auto;
-    min-height: 500px;
+    min-height: 600px;
+    align-items: flex-start;
 }
 
 .photo-container {
